@@ -1,0 +1,74 @@
+/*!
+ * NGSurvey CSS
+ */
+#ngs .error {color: #dc3545!important;}
+#ngs .dashicons {vertical-align: text-bottom;}
+#ngs .survey-form .input-group .form-control {margin-bottom: 0 !important;}
+
+#ngs .questions .question {margin-bottom: 3rem;}
+#ngs .questions .question .question-title {font-size: 1.25rem; font-weight: 400;}
+#ngs .sortable a {text-decoration: none;}
+#ngs .ng-rating-grid .align-center {text-align: center !important;}
+#ngs .ng-rating-grid, #ngs .ng-rating-grid th, #ngs .ng-rating-grid td {border: 0;}
+#ngs .ng-rating .rating-star span {cursor: pointer;}
+#ngs .ng-rating .rating-star label:hover span:before, #ngs .ng-rating .rating-star input:checked ~ label span:before {content: "\f155";}
+
+/*! NPS Questions */
+#ngs .nps-values {margin: 0 0 2px 0;}
+#ngs .nps-values .nps-value {padding: 0; margin: 0; width: 40px; height: 40px; line-height: 40px; text-align: center; vertical-align: middle; border-collapse: collapse; text-decoration: none; border-radius: 0;}
+#ngs .nps-hints {font-size: 0.6rem;}
+#ngs .nps-hints .nps-hint {display: flex; align-items: center; text-align: center;}
+#ngs .nps-hints .nps-hint::before, #ngs .nps-hints .nps-hint::after {content: ''; flex: 1; border-bottom: 1px solid #000; border-left: 1px solid #000;}
+#ngs .nps-hints .nps-hint::before {margin-right: .25em;}
+#ngs .nps-hints .nps-hint::after {margin-left: .25em;}
+#ngs .nps-hints .nps-hint.detractors {width: 240px; color: #dc3545!important;}
+#ngs .nps-hints .nps-hint.detractors::before, #ngs .nps-hints .nps-hint.detractors::after {border-color: #dc3545!important;}
+#ngs .nps-hints .nps-hint.passive {width: 80px; color: #dc3545!important;}
+#ngs .nps-hints .nps-hint.passive::before, #ngs .nps-hints .nps-hint.passive::after {border-color: #ffc107!important;}
+#ngs .nps-hints .nps-hint.promotors {width: 80px; color: #28a745!important;}
+#ngs .nps-hints .nps-hint.promotors::before, #ngs .nps-hints .nps-hint.promotors::after {border-color: #28a745!important;}
+@media (max-width: 576px) {
+	#ngs .nps-values .nps-value {width: 30px; height: 30px; line-height: 30px;}
+	#ngs .nps-hints {font-size: 0.5rem;}
+	#ngs .nps-hints .nps-hint.detractors {width: 180px;}
+	#ngs .nps-hints .nps-hint.passive, #ngs .nps-hints .nps-hint.promotors {width: 60px;}
+}
+@media (min-width: 992px) {
+	#ngs .nps-values .nps-value {width: 50px; height: 50px; line-height: 50px;}
+	#ngs .nps-hints {font-size: 0.7rem;}
+	#ngs .nps-hints .nps-hint.detractors {width: 300px;}
+	#ngs .nps-hints .nps-hint.passive, #ngs .nps-hints .nps-hint.promotors {width: 100px;}
+}
+
+.dashicons.spin {animation: dashicons-spin 1s infinite; animation-timing-function: linear;}
+@keyframes dashicons-spin {0% {transform: rotate( 0deg );} 100% {transform: rotate( 360deg );}}
+
+ /** LOADERS **/
+ @keyframes animate {0% {background-position: -468px 0} 100% {background-position: 468px 0}}
+.ng-loader {width: 100%; clear: both; background: #fff; display: block; padding: 12px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-height: 150px;}
+.ng-loader .ng-container {width:100%; height: 30px;}
+.ng-loader .ng-one,.ng-loader .ng-two,.ng-loader .ng-three,.ng-loader .ng-four,.ng-loader .ng-five,.ng-loader .ng-six {position:relative; background-color: #CCC; height: 6px; animation-name: animate; animation-duration: 2s; animation-iteration-count: infinite; 
+	animation-timing-function: linear; background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee)); background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+	background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%); -webkit-background-size: 800px 104px;}
+.ng-loader .ng-one {left:0; height: 40px; width: 40px;}
+.ng-loader .ng-two {left:50px; top:-33px; width: 25%;}
+.ng-loader .ng-three {left:50px; top:-20px; width: 15%;}
+.ng-loader .ng-four {left:0px; top:30px; width: 80%;}
+.ng-loader .ng-five {left:0px; top:45px; width: 90%;}
+.ng-loader .ng-six {left:0px; top:60px; width: 50%;}
+/** END LOADERS **/
+
+/*! Image Picker by Rodrigo Vera */
+#ngs ul.thumbnails.image_picker_selector {overflow: auto; list-style-image: none; list-style-position: outside; list-style-type: none; padding: 0px; margin: 0px; cursor: pointer;}
+#ngs ul.thumbnails.image_picker_selector ul {overflow: auto; list-style-image: none; list-style-position: outside; list-style-type: none; padding: 0px; margin: 0px; }
+#ngs ul.thumbnails.image_picker_selector li.group_title {float: none; }
+#ngs ul.thumbnails.image_picker_selector li {margin: 0px 12px 12px 0px; float: left; }
+#ngs ul.thumbnails.image_picker_selector li .thumbnail {padding: 6px; border: 1px solid #DDD; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+#ngs ul.thumbnails.image_picker_selector li .thumbnail img {-webkit-user-drag: none;}
+#ngs ul.thumbnails.image_picker_selector li .thumbnail p {margin: 1rem 0 0 0;}
+#ngs ul.thumbnails.image_picker_selector li .thumbnail.selected {background: #08C; color: #fff;}
+
+/*! Date picker */
+.gmi-date-picker ul, .gmi-time-picker ul {list-style: none; list-style-type: none; margin: 0;}
+.gmi-date-picker ul {box-sizing: content-box; -webkit-box-sizing: content-box;}
+.gmi-time-picker ul, .gmi-time-picker li {margin: 0; padding: 0;}

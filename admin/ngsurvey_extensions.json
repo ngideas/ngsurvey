@@ -1,0 +1,64 @@
+{
+	"groups": [
+		{
+			"title": "NgSurvey Extensions",
+			"icon": "dashicons dashicons-admin-plugins",
+			"products": [
+				{
+					"title": "Campaigns",
+					"description": "Build your audience and invite them to take your surveys. Create and send HTML email invitations with built-in visual email builder.",
+					"image": "https://ngideas.com/wp-content/uploads/2021/01/ngsurvey-extension-campaigns.jpg",
+					"url": "https://ngideas.com/product/ngsurvey-campaigns/"
+				},
+				{
+					"title": "CSV Downloads",
+					"description": "Add support to download the responses in a CSV files. Simple and easy way to export your responses to third-party apps.",
+					"image": "https://ngideas.com/wp-content/uploads/2021/01/ngsurvey-extension-csv-downloads.jpg",
+					"url": "https://ngideas.com/product/ngsurvey-csv-downloads/"
+				},
+				{
+					"title": "NgSurvey Emails",
+					"description": "Send automated thank you emails, response reports, or send survey invitation when purchased a product on WooCommerce.",
+					"image": "https://ngideas.com/wp-content/uploads/2021/01/ngsurvey-extension-emails.jpg",
+					"url": "https://ngideas.com/product/ngsurvey-emails/"
+				},
+				{
+					"title": "Front-end Management",
+					"description": "Monetise surveys as a software-as-service business. Let your front-end users create and manage surveys on their own.",
+					"image": "https://ngideas.com/wp-content/uploads/2021/01/ngsurvey-extension-frontend-management.jpg",
+					"url": "https://ngideas.com/product/front-end-management/"
+				},
+				{
+					"title": "MaxMind GeoIP Location",
+					"description": "Add user geo location support to your surveys. Capture user country, region and city details.",
+					"image": "https://ngideas.com/wp-content/uploads/2021/01/ngsurvey-extension-maxmind-geoip.jpg",
+					"url": "https://ngideas.com/product/ngsurvey-geoip-location/"
+				},
+				{
+					"title": "NgSurvey reCAPTCHA",
+					"description": "Protect your public surveys from spammers by adding support for Google reCaptcha (hidden, checkbox, I am not a robot).",
+					"image": "https://ngideas.com/wp-content/uploads/2021/02/ngsurvey-extension-recaptcha.jpg",
+					"url": "https://ngideas.com/product/ngsurvey-recaptcha/"
+				},
+				{
+					"title": "NgSurvey Import & Export",
+					"description": "Export your survey to a JSON file and import to another site or use it to duplicate the surveys with one click importer.",
+					"image": "https://ngideas.com/wp-content/uploads/2021/04/ngsurvey-extension-import-export.png",
+					"url": "https://ngideas.com/product/ngsurvey-import-export/"
+				}
+			]
+		},
+		{
+			"title": "NgSurvey Question Types",
+			"icon": "dashicons dashicons-format-chat",
+			"products": [
+				{
+					"title": "Question Types Bundle",
+					"description": "Get 14 essential premium question types with this bundle. Build full fledged surveys with all required tools.",
+					"image": "https://ngideas.com/wp-content/uploads/2021/02/ngsurvey-questions-bundle.jpg",
+					"url": "https://ngideas.com/ngsurvey-bundles/"
+				}
+			]
+		}
+	]
+}

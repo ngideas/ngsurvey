@@ -1,0 +1,1965 @@
+# NgSurvey Translation Template File.
+# Copyright (C) 2021 BulaSikku Technologies Private Limited
+# This file is distributed under the same license as the NgSurvey package.
+# NgIdeas <support@ngideas.com>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ngsurvey\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-08 23:42+0530\n"
+"PO-Revision-Date: 2021-06-08 21:00+GMT\n"
+"Last-Translator: NgIdeas <support@ngideas.com>\n"
+"Language-Team: NgIdeas <support@ngideas.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: admin/controllers/class-controller-extensions.php:50
+msgid "An error occurred while fetching data. Please try again."
+msgstr ""
+
+#: admin/controllers/class-controller-extensions.php:75
+#: admin/controllers/class-controller-extensions.php:132
+msgid "Missing required fields, please try again."
+msgstr ""
+
+#: admin/controllers/class-controller-extensions.php:126
+msgid "We are unable to validate the license. Please try again."
+msgstr ""
+
+#: admin/controllers/class-controller-extensions.php:175
+msgid "An error occurred while deactivating license. Please try again."
+msgstr ""
+
+#: admin/controllers/class-controller-questions.php:51
+#: admin/controllers/class-controller-reports.php:48
+msgid "This page cannot be accessed directly."
+msgstr ""
+
+#: admin/controllers/class-controller-questions.php:67
+#: admin/controllers/class-controller-questions.php:74
+#: public/controllers/class-controller-survey.php:54
+#: public/controllers/class-controller-survey.php:72
+msgid "Restricted access."
+msgstr ""
+
+#: admin/controllers/class-controller-questions.php:202
+msgid "Your question title.."
+msgstr ""
+
+#: admin/controllers/class-controller-responses.php:85
+msgid "Response completed"
+msgstr ""
+
+#: admin/controllers/class-controller-responses.php:87
+msgid "Response pending"
+msgstr ""
+
+#: admin/controllers/class-controller-responses.php:91
+#: templates/admin/reports/dashboard.php:111
+msgid "Guest"
+msgstr ""
+
+#: admin/controllers/class-controller-responses.php:96
+#: templates/admin/reports/dashboard.php:115
+msgid "View"
+msgstr ""
+
+#: admin/controllers/class-controller-responses.php:129
+msgid "Error occurred while deleting the responses"
+msgstr ""
+
+#: admin/models/class-model-questions.php:155
+msgid "Count of questions does not match the existing questions."
+msgstr ""
+
+#: admin/models/class-model-questions.php:241
+msgid "An error occurred while deleting the page."
+msgstr ""
+
+#: admin/models/class-model-reports.php:182
+msgid "Completed"
+msgstr ""
+
+#: admin/models/class-model-reports.php:183
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:302
+msgid "Pending"
+msgstr ""
+
+#: admin/models/class-model-reports.php:225
+#: templates/admin/survey_reports.php:71
+msgid "Locations"
+msgstr ""
+
+#: admin/models/class-model-reports.php:226
+#: templates/admin/survey_reports.php:79
+msgid "Browsers"
+msgstr ""
+
+#: admin/models/class-model-reports.php:227
+msgid "Operating Systems"
+msgstr ""
+
+#: admin/models/class-model-reports.php:228
+msgid "Device Types"
+msgstr ""
+
+#: includes/init/class-ngsurvey-autoupdate.php:135
+msgid "An error occurred while checking plugin update."
+msgstr ""
+
+#: includes/init/class-ngsurvey-autoupdate.php:137
+#: includes/init/class-ngsurvey-autoupdate.php:150
+msgid "Try again"
+msgstr ""
+
+#: includes/init/class-ngsurvey-autoupdate.php:148
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:83
+msgctxt "Post type general name"
+msgid "Surveys"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:84
+msgctxt "Post type singular name"
+msgid "Survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:85
+msgctxt "NgSurvey"
+msgid "NgSurvey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:86
+msgctxt "Add New on Toolbar"
+msgid "Survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:87
+#: templates/admin/common/static.php:25
+msgid "Add New"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:88
+msgid "Add New Survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:89
+msgid "New Survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:90
+msgid "Edit Survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:91
+msgid "View Survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:92
+msgid "All Surveys"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:93
+msgid "Search Surveys"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:94
+msgid "Parent Surveys:"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:95
+msgid "No surveys found."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:96
+msgid "No surveys found in Trash."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:97
+msgctxt "Overrides the \"Featured Image\" phrase for this post type."
+msgid "Survey Cover Image"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:98
+msgctxt "Overrides the \"Set featured image\" phrase for this post type."
+msgid "Set cover image"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:99
+msgctxt "Overrides the \"Remove featured image\" phrase for this post type."
+msgid "Remove cover image"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:100
+msgctxt "Overrides the \"Use as featured image\" phrase for this post type."
+msgid "Use as cover image"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:101
+msgctxt ""
+"Overrides the \"Insert into post\"/\"Insert into page\" phrase (used when "
+"inserting media into a post)."
+msgid "Insert into survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:102
+msgctxt ""
+"Overrides the \"Uploaded to this post\"/\"Uploaded to this page\" phrase "
+"(used when viewing media attached to a post)."
+msgid "Uploaded to this survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:103
+msgctxt ""
+"Screen reader text for the filter links heading on the post type listing "
+"screen. Default \"Filter posts list\"/\"Filter pages list\"."
+msgid "Filter surveys list"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:104
+msgctxt ""
+"Screen reader text for the pagination heading on the post type listing "
+"screen. Default \"Posts list navigation\"/\"Pages list navigation\"."
+msgid "Surveys list navigation"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:105
+msgctxt ""
+"Screen reader text for the items list heading on the post type listing "
+"screen. Default \"Posts list\"/\"Pages list\"."
+msgid "Surveys list"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:140
+msgctxt "taxonomy general name"
+msgid "Survey Categories"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:141
+msgctxt "taxonomy singular name"
+msgid "Survey Category"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:142
+msgid "Search Survey Categories"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:143
+msgid "All Survey Categories"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:144
+msgid "Parent Survey Category"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:145
+msgid "Parent Survey Category:"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:146
+msgid "Edit Survey Category"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:147
+msgid "Update Survey Category"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:148
+msgid "Add New Survey Category"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:149
+msgid "New Survey Category"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:150
+msgid "Categories"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:182
+#, php-format
+msgid "Survey updated. <a href=\"%s\">Add Questions</a> to your survey."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:183
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:184
+msgid "Custom field deleted."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:185
+msgid "Survey updated."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:186
+#, php-format
+msgid "Survey restored to revision from %s"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:187
+#, php-format
+msgid "Survey published. <a href=\"%s\">Add Questions</a>"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:188
+msgid "Survey saved."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:189
+#, php-format
+msgid "Survey submitted. <a target=\"_blank\" href=\"%s\">Preview Survey</a>"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:190
+#, php-format
+msgid ""
+"Survey scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview Survey</a>"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:191
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:192
+#, php-format
+msgid "Survey draft updated. <a href=\"%s\">Add Questions</a>"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:212
+#: includes/init/class-ngsurvey-cpt.php:218
+msgid "Extensions"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:217
+msgid "Install NgSurvey Extensions"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:229
+#: templates/admin/edit_questions.php:34
+msgid "Questions"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:234
+#: includes/init/class-ngsurvey-cpt.php:235
+msgid "Edit Questions"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:246
+msgid "Reports"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:251
+#: includes/init/class-ngsurvey-cpt.php:252
+#: includes/init/class-ngsurvey-cpt.php:473
+msgid "View Reports"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:263
+#: includes/init/class-ngsurvey-cpt.php:269
+msgid "Settings"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:268 templates/admin/settings.php:25
+msgid "NgSurvey Settings"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:280
+msgid "No survey found."
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:287
+#: public/class-ngsurvey-public.php:75
+msgid "Survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:320
+msgid "Page 1"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:360
+#: includes/init/class-ngsurvey-cpt.php:374
+#: public/class-ngsurvey-public.php:109
+msgid "Unauthorised access"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:429
+msgid "Shortcode"
+msgstr ""
+
+#: includes/init/class-ngsurvey-cpt.php:472
+msgid "Add Questions"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:78
+msgid "Tracking Method"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:80
+msgid "Cookie"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:80
+msgid "IP Address"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:80
+msgid "Username"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:84
+msgid "End Message Title"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:86
+msgid "Enter end of survey message title"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:90
+msgid "End Message Description"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:92
+msgid "Enter end of survey message"
+msgstr ""
+
+#: includes/init/class-ngsurvey-options.php:108
+msgid "Survey Settings"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:38
+msgid "General"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:53
+msgid "Survey Permalink Base"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:56
+msgid ""
+"Enter the base of the survey permalinks. Avoid all special characters. "
+"Default: survey"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:60
+msgid "Category Permalink Base"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:63
+msgid ""
+"Enter the base of the survey category permalinks. Avoid all special "
+"characters. Default: surveys"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:67
+msgid "Load Bootstrap 5 JavaScript"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:69
+msgid ""
+"Disable this option if your site theme is already loading Bootstrap v5 "
+"JavaScript library."
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:72
+#: includes/init/class-ngsurvey-settings.php:82
+#: includes/questions/class-choice-question.php:89
+msgid "Yes"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:73
+#: includes/init/class-ngsurvey-settings.php:83
+msgid "No, I have it"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:77
+msgid "Load Bootstrap 5 CSS"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:79
+msgid ""
+"Disable this option if your site theme is already loading Bootstrap v5 CSS "
+"library."
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:87
+msgid "Maps Service"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:89
+msgid ""
+"Select the default maps service to be used in the questionnaire or reports "
+"as applicable."
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:92
+msgid "OpenStreetMap"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:93
+msgid "Google Maps"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:97
+msgid "Google Maps API Key"
+msgstr ""
+
+#: includes/init/class-ngsurvey-settings.php:100
+msgid ""
+"Enter the Google Maps API key to use Location type questions. The API should "
+"have permissions for Google Maps JavaScript API, Geocoding API and Google "
+"Maps Places API."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ActionFactory.php:161
+msgid "Invalid action - must be a recurring action."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:60
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:75
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:76
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:89
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:19
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:30
+msgid "Scheduled Actions"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:127
+msgid "About"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:129
+#, php-format
+msgid "About Action Scheduler %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:131
+msgid ""
+"Action Scheduler is a scalable, traceable job queue for background "
+"processing large sets of actions. Action Scheduler works by triggering an "
+"action hook to run at some time in the future. Scheduled actions can also be "
+"scheduled to run on a recurring schedule."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:139
+msgid "Columns"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:141
+msgid "Scheduled Action Columns"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:143
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:96
+msgid "Hook"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:143
+msgid "Name of the action hook that will be triggered."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:144
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:97
+#: templates/admin/reports/responses.php:28
+msgid "Status"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:144
+msgid "Action statuses are Pending, Complete, Canceled, Failed"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:145
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:98
+msgid "Arguments"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:145
+msgid "Optional data array passed to the action hook."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:146
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:99
+msgid "Group"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:146
+msgid "Optional action group."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:147
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:100
+msgid "Recurrence"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:147
+msgid "The action's schedule frequency."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:148
+msgid "Scheduled"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:148
+msgid "The date/time the action is/was scheduled to run."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:149
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:102
+msgid "Log"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:149
+msgid "Activity log for the action."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_DataController.php:133
+#, php-format
+msgid "Stopped the insanity for %d second"
+msgid_plural "Stopped the insanity for %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_DataController.php:137
+msgid "Attempting to reduce used memory..."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_InvalidActionException.php:21
+#, php-format
+msgid "Action [%1$s] has an invalid schedule: %2$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_InvalidActionException.php:40
+#, php-format
+msgid ""
+"Action [%1$s] has invalid arguments. It cannot be JSON decoded to an array. "
+"$args = %2$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:92
+#: templates/admin/common/static.php:26 templates/admin/common/static.php:33
+#: templates/admin/form/pages.php:43 templates/admin/form/question.php:37
+#: templates/admin/form/rules.php:70 templates/questions/form/choice.php:34
+#: templates/questions/form/choice.php:62
+msgid "Delete"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:101
+msgid "Scheduled Date"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:122
+msgid "Claim ID"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:129
+msgid "Run"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:130
+msgid "Process the action now as if it were run as part of a queue"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:133
+#: templates/admin/common/static.php:28
+msgid "Cancel"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:134
+msgid "Cancel the action now to avoid it being run in future"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:144
+#, php-format
+msgid "%s year"
+msgid_plural "%s years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:149
+#, php-format
+msgid "%s month"
+msgid_plural "%s months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:154
+#, php-format
+msgid "%s week"
+msgid_plural "%s weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:159
+#, php-format
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:164
+#, php-format
+msgid "%s hour"
+msgid_plural "%s hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:169
+#, php-format
+msgid "%s minute"
+msgid_plural "%s minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:174
+#, php-format
+msgid "%s second"
+msgid_plural "%s seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:201
+msgid "Now!"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:237
+#, php-format
+msgid "Every %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:243
+msgid "Non-repeating"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:341
+msgid ""
+"It appears one or more database tables were missing. Attempting to re-create "
+"the missing table(s)."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:358
+#, php-format
+msgid ""
+"Maximum simultaneous queues already in progress (%s queue). No additional "
+"queues will begin processing until the current queues are complete."
+msgid_plural ""
+"Maximum simultaneous queues already in progress (%s queues). No additional "
+"queues will begin processing until the current queues are complete."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:374
+#, php-format
+msgid ""
+"A new queue has begun processing. <a href=\"%s\">View actions in-progress "
+"&raquo;</a>"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:377
+#, php-format
+msgid "The next queue will begin processing in approximately %d seconds."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:398
+#, php-format
+msgid "Successfully executed action: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:402
+#, php-format
+msgid "Successfully canceled action: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:406
+#, php-format
+msgid "Successfully processed change for action: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:412
+#, php-format
+msgid "Could not process change for action: \"%1$s\" (ID: %2$d). Error: %3$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:458
+#, php-format
+msgid " (%s ago)"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:461
+#, php-format
+msgid " (%s)"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:610
+msgid "Search hook, args and claim ID"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_QueueRunner.php:192
+msgid "Every minute"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:101
+msgid "Action Scheduler"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:101
+msgid "This section shows scheduled action counts."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:104
+msgid "Version:"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:108
+msgid "Action Status"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:110
+#: templates/admin/reports/browsers.php:43
+#: templates/admin/reports/devices.php:43
+#: templates/admin/reports/locations.php:43
+#: templates/admin/reports/platforms.php:42
+msgid "Count"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:111
+msgid "Oldest Scheduled Date"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:112
+msgid "Newest Scheduled Date"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_WPCommentCleaner.php:103
+#, php-format
+msgid "This data will be deleted in %s."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/ActionScheduler_WPCommentCleaner.php:108
+#, php-format
+msgid ""
+"Action Scheduler has migrated data to custom tables; however, orphaned log "
+"entries exist in the WordPress Comments table. %1$s <a href=\"%2$s\">Learn "
+"more &raquo;</a>"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler.php:195
+#, php-format
+msgid "%s() was called before the Action Scheduler data store was initialized"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:467
+msgid "Filter"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:567
+#, php-format
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:672
+msgid "Search"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:72
+msgid "action created"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:76
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBLogger.php:134
+msgid "action canceled"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:82
+#, php-format
+msgid "action started via %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:84
+msgid "action started"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:92
+#, php-format
+msgid "action complete via %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:94
+msgid "action complete"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:102
+#, php-format
+msgid "action failed via %1$s: %2$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:105
+#, php-format
+msgid "action failed: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:112
+#, php-format
+msgid "action timed out after %s seconds"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:118
+#, php-format
+msgid "unexpected shutdown: PHP Fatal error %1$s in %2$s on line %3$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:123
+msgid "action reset"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:129
+#, php-format
+msgid "action ignored via %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:131
+msgid "action ignored"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:146
+#, php-format
+msgid "There was a failure fetching this action: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:148
+msgid "There was a failure fetching this action"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:156
+#, php-format
+msgid "There was a failure scheduling the next instance of this action: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:227
+#, php-format
+msgid ""
+"ActionScheduler_Action::$args too long. To ensure the args column can be "
+"indexed, action args should not be more than %d characters when encoded as "
+"JSON."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:301
+msgid "Complete"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:303
+msgid "In-progress"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:304
+msgid "Failed"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:305
+msgid "Canceled"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:67
+msgid "Database error."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:75
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:25
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/ActionScheduler_DBStoreMigrator.php:44
+#, php-format
+msgid "Error saving action: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:268
+msgid "Invalid value for select or count parameter. Cannot query actions."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:458
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:548
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:580
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:777
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:819
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:457
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:468
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:495
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:773
+#, php-format
+msgid "Unidentified action %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:661
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:627
+#, php-format
+msgid "The group \"%s\" does not exist."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:675
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:607
+msgid "Unable to claim actions. Database error."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:838
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:740
+msgid "Invalid action ID. No status found."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:840
+msgid "Unknown status found for action."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:62
+msgid "Unable to save action."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:283
+msgid "Invalid schedule. Cannot save action."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:689
+#, php-format
+msgid "Unable to unlock claim %s. Database error."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:704
+#, php-format
+msgid "Unable to unlock claim on action %s. Database error."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:716
+#, php-format
+msgid "Unable to mark failure on action %s. Database error."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:840
+#, php-format
+msgid ""
+"%s Support for strings longer than this will be removed in a future version."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:36
+msgctxt "post"
+msgid "Failed"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:38
+#, php-format
+msgid "Failed <span class=\"count\">(%s)</span>"
+msgid_plural "Failed <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:51
+msgctxt "post"
+msgid "In-Progress"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:53
+#, php-format
+msgid "In-Progress <span class=\"count\">(%s)</span>"
+msgid_plural "In-Progress <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:20
+msgid "Scheduled actions are hooks triggered on a cetain date and time."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:31
+msgid "Scheduled Action"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:32
+msgctxt "Admin menu name"
+msgid "Scheduled Actions"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:33
+msgid "Add"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:34
+msgid "Add New Scheduled Action"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:35
+#: templates/admin/form/pages.php:39
+msgid "Edit"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:36
+msgid "Edit Scheduled Action"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:37
+msgid "New Scheduled Action"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:38
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:39
+msgid "View Action"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:40
+msgid "Search Scheduled Actions"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:41
+msgid "No actions found"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:42
+msgid "No actions found in trash"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_TaxonomyRegistrar.php:14
+msgid "Action Group"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/ActionMigrator.php:95
+#, php-format
+msgid "Unable to remove source migrated action %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/Config.php:52
+msgid "Source store must be configured before running a migration"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/Config.php:74
+msgid "Source logger must be configured before running a migration"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/Config.php:96
+msgid "Destination store must be configured before running a migration"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/Config.php:118
+msgid "Destination logger must be configured before running a migration"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/Controller.php:142
+msgid ""
+"Action Scheduler migration in progress. The list of scheduled actions may be "
+"incomplete."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/Runner.php:82
+#, php-format
+msgid "Migrating %d action"
+msgid_plural "Migrating %d actions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/migration/Runner.php:107
+#, php-format
+msgid "Migrated action with ID %1$d in %2$s to ID %3$d in %4$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:33
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ProgressBar.php:47
+#, php-format
+msgid "The %s class can only be run within WP CLI."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:59
+msgid ""
+"There are too many concurrent batches, but the run is forced to continue."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:61
+msgid "There are too many concurrent batches."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:93
+#, php-format
+msgid "Running %d action"
+msgid_plural "Running %d actions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:113
+msgid "The claim has been lost. Aborting current batch."
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:138
+#, php-format
+msgid "Started processing action %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:155
+#, php-format
+msgid "Completed processing action %1$s with hook: %2$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:170
+#, php-format
+msgid "Error processing action %1$s: %2$s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:100
+#, php-format
+msgid "Found %d scheduled task"
+msgid_plural "Found %d scheduled tasks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:117
+#, php-format
+msgid "%d batch executed."
+msgid_plural "%d batches executed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:136
+#, php-format
+msgid "There was an error running the action scheduler: %s"
+msgstr ""
+
+#: includes/lib/vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:153
+#, php-format
+msgid "%d scheduled task completed."
+msgid_plural "%d scheduled tasks completed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/questions/class-choice-question.php:49
+msgid "Multiple Choice"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:53
+msgid "Choice Type"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:56
+msgid "Select the type of HTML elements should be displayed to the users."
+msgstr ""
+
+#: includes/questions/class-choice-question.php:58
+msgid "Radio Buttons"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:59
+msgid "Checkboxes"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:60
+msgid "Select Dropdown"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:66
+msgid "Minimum Selections"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:69
+msgid ""
+"Enter the minimum number of answers user must select. Applicable for "
+"checkboxes."
+msgstr ""
+
+#: includes/questions/class-choice-question.php:75
+msgid "Maximum Selections"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:78
+msgid ""
+"Enter the maximum number of answers the user can select. Applicable for "
+"checkboxes."
+msgstr ""
+
+#: includes/questions/class-choice-question.php:84
+msgid "Show Answers Inline"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:87
+msgid "Shows the answers inline instead of one answer per row."
+msgstr ""
+
+#: includes/questions/class-choice-question.php:90
+msgid "No"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:96
+msgid "Show Custom Answer"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:99
+msgid "Shows a text box to the user to enter their own answer."
+msgstr ""
+
+#: includes/questions/class-choice-question.php:101
+msgid "Show"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:102
+msgid "Hide"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:108
+msgid "Custom Answer Placeholder"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:111
+msgid ""
+"Enter the text that is shown as placeholder in the custom answer textbox."
+msgstr ""
+
+#: includes/questions/class-choice-question.php:116
+msgid "Custom Answer Max Length"
+msgstr ""
+
+#: includes/questions/class-choice-question.php:119
+msgid ""
+"Enter the maximum number of characters allowed in the custom answer textbox."
+msgstr ""
+
+#: includes/questions/class-header-question.php:49
+msgid "Page Header"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:49
+msgid "Single line Textbox"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:53
+msgid "Textbox Type"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:56
+msgid ""
+"Select the type of HTML text elements should be displayed to the users. For "
+"advanced usage, select Textbox and use regular expressions."
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:58
+msgid "Plain Textbox"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:59
+msgid "Password"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:60
+msgid "Email"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:61
+msgid "Number"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:67
+msgid "Regular Expression"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:70
+msgid ""
+"Enter the regular expression which you can use to validate the user input. "
+"Leave blank for no regex validation."
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:75
+msgid "Validation Message"
+msgstr ""
+
+#: includes/questions/class-textbox-question.php:78
+msgid "The message that should be displayed if the regex validation fails."
+msgstr ""
+
+#: public/controllers/class-controller-survey.php:179
+msgid "An error occurred while creating the response."
+msgstr ""
+
+#: public/controllers/class-controller-survey.php:200
+msgid "Unable to process user responses."
+msgstr ""
+
+#: public/controllers/class-controller-survey.php:569
+msgid "Thank you for your response."
+msgstr ""
+
+#: public/models/class-model-responses.php:128
+#: public/models/class-model-responses.php:153
+#: public/models/class-model-responses.php:177
+#: public/models/class-model-responses.php:203
+msgid "You already took this survey. Thank you."
+msgstr ""
+
+#: templates/admin/edit_questions.php:39 templates/admin/form/rules.php:28
+msgid "Pages"
+msgstr ""
+
+#: templates/admin/edit_questions.php:44
+msgid "Conditional Rules"
+msgstr ""
+
+#: templates/admin/settings.php:64
+msgid "Save Settings"
+msgstr ""
+
+#: templates/admin/settings.php:72
+msgid "Successfully applied the settings."
+msgstr ""
+
+#: templates/admin/survey_extensions.php:25
+msgid "My Extensions"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:28
+msgid "Get Extensions"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:38
+msgid ""
+"No extensions are installed. <a href=\"https://ngideas.com/extensions/\" "
+"target=\"_blank\">Get extensions here</a>."
+msgstr ""
+
+#: templates/admin/survey_extensions.php:44
+msgid "Plugin"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:45
+msgid "Description"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:46
+msgid "License Status"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:61
+#: templates/admin/reports/browsers.php:41
+#: templates/admin/reports/platforms.php:41
+msgid "Version"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:64
+msgid "By"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:68
+msgid "Visit plugin site"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:72
+#, php-format
+msgid "License Key: %s"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:80
+msgid "Activated"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:83
+msgid "Remove License"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:87
+#: templates/admin/survey_extensions.php:158
+msgid "Activate"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:115
+msgid "Learn more"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:134
+msgid "Activate License"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:135
+#: templates/admin/survey_extensions.php:157
+#: templates/admin/survey_reports.php:132
+#: templates/admin/survey_reports.php:142
+msgid "Close"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:142
+msgid "Email address"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:143
+msgid "Enter email address"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:144
+msgid "Enter the email id used for the purchase"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:147
+msgid "License Key"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:148
+msgid "Enter license key"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:149
+msgid "Enter the license key"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:165
+msgid "Confirm deactivate?"
+msgstr ""
+
+#: templates/admin/survey_extensions.php:166
+msgid ""
+"Are you sure you would like deactivate the license from this site? You can "
+"reactivate it on this site or another site later."
+msgstr ""
+
+#: templates/admin/survey_extensions.php:167
+msgid "Deactivate"
+msgstr ""
+
+#: templates/admin/survey_reports.php:59
+msgid "Dashboard"
+msgstr ""
+
+#: templates/admin/survey_reports.php:63
+msgid "Consolidated Report"
+msgstr ""
+
+#: templates/admin/survey_reports.php:67
+msgid "All Responses"
+msgstr ""
+
+#: templates/admin/survey_reports.php:75
+msgid "Platforms"
+msgstr ""
+
+#: templates/admin/survey_reports.php:83
+msgid "Devices"
+msgstr ""
+
+#: templates/admin/survey_reports.php:131
+msgid "Response details"
+msgstr ""
+
+#: templates/admin/common/static.php:20
+msgid "Confirm delete?"
+msgstr ""
+
+#: templates/admin/common/static.php:21
+msgid ""
+"This action is irreversible and the data will be deleted permanently. Do you "
+"want to continue?"
+msgstr ""
+
+#: templates/admin/common/static.php:22
+msgid "Confirm unpublishing?"
+msgstr ""
+
+#: templates/admin/common/static.php:23
+msgid ""
+"The survey will no longer available for the users. Are you sure you would "
+"like to unpublish this survey?"
+msgstr ""
+
+#: templates/admin/common/static.php:24
+msgid "Confirm"
+msgstr ""
+
+#: templates/admin/common/static.php:27
+msgid "Unpublish"
+msgstr ""
+
+#: templates/admin/common/static.php:29
+msgid "Import"
+msgstr ""
+
+#: templates/admin/common/static.php:30
+msgid "Uninstall"
+msgstr ""
+
+#: templates/admin/common/static.php:31
+msgid "The selected item successfully deleted."
+msgstr ""
+
+#: templates/admin/common/static.php:32
+msgid "Export to CSV"
+msgstr ""
+
+#: templates/admin/common/static.php:34
+msgid "Copy Question"
+msgstr ""
+
+#: templates/admin/common/static.php:35
+msgid "Move Question"
+msgstr ""
+
+#: templates/admin/common/static.php:36
+msgid "Add new page"
+msgstr ""
+
+#: templates/admin/common/static.php:37
+msgid "Edit page title"
+msgstr ""
+
+#: templates/admin/common/static.php:38 templates/admin/form/rules.php:50
+msgid "Add a rule"
+msgstr ""
+
+#: templates/admin/common/static.php:39
+msgid "Add a Contact Group"
+msgstr ""
+
+#: templates/admin/common/static.php:40
+msgid "Please enter the title of the page."
+msgstr ""
+
+#: templates/admin/common/static.php:41
+msgid "Please enter the title of the rule."
+msgstr ""
+
+#: templates/admin/common/static.php:42
+msgid "Please select the page."
+msgstr ""
+
+#: templates/admin/common/static.php:43
+msgid "Please enter the title of the contact group."
+msgstr ""
+
+#: templates/admin/common/static.php:44
+msgid "You cannot delete the only page available in this survey."
+msgstr ""
+
+#: templates/admin/common/static.php:45
+msgid "Please enter the value to proceed."
+msgstr ""
+
+#: templates/admin/common/static.php:46
+msgid "Click to publish"
+msgstr ""
+
+#: templates/admin/common/static.php:47
+msgid "Click to unpublish"
+msgstr ""
+
+#: templates/admin/common/static.php:48
+msgid "Click to edit"
+msgstr ""
+
+#: templates/admin/form/pages.php:22
+msgid "Add a page"
+msgstr ""
+
+#: templates/admin/form/pages.php:36 templates/admin/form/question.php:34
+#: templates/admin/form/rules.php:67
+#: templates/admin/reports/consolidated.php:40
+#: templates/admin/reports/dashboard.php:101
+#: templates/admin/reports/responses.php:30
+msgid "ID"
+msgstr ""
+
+#: templates/admin/form/pages.php:46 templates/admin/form/question.php:46
+#: templates/admin/form/rules.php:73 templates/questions/form/choice.php:39
+#: templates/questions/form/choice.php:67
+msgid "Click and drag to sort"
+msgstr ""
+
+#: templates/admin/form/question.php:30 templates/admin/form/rules.php:63
+msgid "Save"
+msgstr ""
+
+#: templates/admin/form/question.php:40
+msgid "Move"
+msgstr ""
+
+#: templates/admin/form/question.php:43
+msgid "Duplicate"
+msgstr ""
+
+#: templates/admin/form/question.php:62
+msgid "Basic Details"
+msgstr ""
+
+#: templates/admin/form/question.php:67
+msgid "Question Data"
+msgstr ""
+
+#: templates/admin/form/question.php:72
+msgid "Options"
+msgstr ""
+
+#: templates/admin/form/question.php:81
+msgid "Question Title"
+msgstr ""
+
+#: templates/admin/form/question.php:84
+msgid "Enter title of your question"
+msgstr ""
+
+#: templates/admin/form/question.php:88
+msgid "Question Description"
+msgstr ""
+
+#: templates/admin/form/questions.php:79
+msgid "Click on the question types on the left sidebar to add new questions."
+msgstr ""
+
+#: templates/admin/form/rules.php:46
+msgid ""
+"When you make changes to the questions, click on the page on left sidebar to "
+"reload the rules."
+msgstr ""
+
+#: templates/admin/form/rules.php:86
+msgid "Rule Title"
+msgstr ""
+
+#: templates/admin/form/rules.php:89
+msgid "Enter title of your rule"
+msgstr ""
+
+#: templates/admin/form/rules.php:95
+msgid "Select conditions"
+msgstr ""
+
+#: templates/admin/form/rules.php:100
+msgid "Choose an action"
+msgstr ""
+
+#: templates/admin/form/rules.php:103
+msgid "- Select an action -"
+msgstr ""
+
+#: templates/admin/form/rules.php:104
+msgid "Show page"
+msgstr ""
+
+#: templates/admin/form/rules.php:105
+msgid "Skip page"
+msgstr ""
+
+#: templates/admin/form/rules.php:106
+msgid "Show question on the current page"
+msgstr ""
+
+#: templates/admin/form/rules.php:107
+msgid "Hide question on the current page"
+msgstr ""
+
+#: templates/admin/form/rules.php:108
+msgid "Show question on a future page"
+msgstr ""
+
+#: templates/admin/form/rules.php:109
+msgid "Hide question on a future page"
+msgstr ""
+
+#: templates/admin/form/rules.php:110
+msgid "End response"
+msgstr ""
+
+#: templates/admin/form/rules.php:113
+msgid "- Select a page -"
+msgstr ""
+
+#: templates/admin/form/rules.php:116
+msgid "- Select a question -"
+msgstr ""
+
+#: templates/admin/reports/browsers.php:24
+#: templates/admin/reports/browsers.php:31
+msgid "Browser Trends"
+msgstr ""
+
+#: templates/admin/reports/browsers.php:40
+msgid "Browser Name"
+msgstr ""
+
+#: templates/admin/reports/browsers.php:42
+msgid "Engine"
+msgstr ""
+
+#: templates/admin/reports/consolidated.php:25
+msgid "Expand All"
+msgstr ""
+
+#: templates/admin/reports/consolidated.php:26
+msgid "Collapse All"
+msgstr ""
+
+#: templates/admin/reports/consolidated.php:71
+msgid "View all comments"
+msgstr ""
+
+#: templates/admin/reports/consolidated.php:79
+#, php-format
+msgid "%d people responded to this question."
+msgstr ""
+
+#: templates/admin/reports/consolidated.php:99
+msgid "User Comments"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:30
+#: templates/admin/reports/locations.php:24
+#: templates/admin/reports/locations.php:31
+msgid "Location Trends"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:39
+msgid "Responses Trends"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:40
+#: templates/questions/reports/choice.php:75
+#: templates/questions/reports/choice.php:83
+#: templates/questions/reports/textbox.php:28
+msgid "Responses"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:51
+msgid "Total Responses"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:53
+msgid "View Consolidated Report"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:58
+msgid "Browse Completed Responses"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:63
+msgid "Browse Pending Responses"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:68
+msgid "View Location Report"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:73
+msgid "View Platforms Report"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:78
+msgid "View Browsers Report"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:83
+msgid "View Devices Report"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:92
+msgid "Response Status"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:102
+#: templates/admin/reports/responses.php:25
+msgid "User Name"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:103
+#: templates/admin/reports/responses.php:26
+msgid "Start Date"
+msgstr ""
+
+#: templates/admin/reports/dashboard.php:104
+#: templates/admin/reports/responses.php:29
+msgid "Results"
+msgstr ""
+
+#: templates/admin/reports/devices.php:24
+#: templates/admin/reports/devices.php:31
+msgid "Devices Trends"
+msgstr ""
+
+#: templates/admin/reports/devices.php:40
+msgid "Device Type"
+msgstr ""
+
+#: templates/admin/reports/devices.php:41
+msgid "Brand Name"
+msgstr ""
+
+#: templates/admin/reports/devices.php:42
+msgid "Model Name"
+msgstr ""
+
+#: templates/admin/reports/locations.php:40
+msgid "Country"
+msgstr ""
+
+#: templates/admin/reports/locations.php:41
+msgid "State"
+msgstr ""
+
+#: templates/admin/reports/locations.php:42
+msgid "City"
+msgstr ""
+
+#: templates/admin/reports/platforms.php:24
+#: templates/admin/reports/platforms.php:31
+msgid "Platform Trends"
+msgstr ""
+
+#: templates/admin/reports/platforms.php:40
+msgid "Operating System"
+msgstr ""
+
+#: templates/admin/reports/responses.php:27
+msgid "Finished On"
+msgstr ""
+
+#: templates/admin/reports/custom/default.php:21
+msgid "Response ID"
+msgstr ""
+
+#: templates/admin/reports/custom/default.php:22
+msgid "Comments"
+msgstr ""
+
+#: templates/admin/reports/custom/default.php:23
+msgid "User Information"
+msgstr ""
+
+#: templates/admin/results/response.php:52
+msgid "Additional comments"
+msgstr ""
+
+#: templates/public/single_survey.php:40
+msgid "Your response has errors. Please correct them and try again."
+msgstr ""
+
+#: templates/public/single_survey.php:46
+msgid "Finish"
+msgstr ""
+
+#: templates/public/single_survey.php:50
+msgid "Continue"
+msgstr ""
+
+#: templates/public/common/pro.php:13
+msgid "This is a pro feature. Get it here."
+msgstr ""
+
+#: templates/questions/form/choice.php:30
+#: templates/questions/form/choice.php:58
+#: templates/questions/survey/textbox.php:33
+msgid "Enter your answer"
+msgstr ""
+
+#: templates/questions/form/choice.php:52
+msgid "Add an answer"
+msgstr ""
+
+#: templates/questions/reports/choice.php:74
+#: templates/questions/reports/choice.php:82
+msgid "Response Statistics"
+msgstr ""
+
+#: templates/questions/reports/textbox.php:27
+msgid "Response Trends"
+msgstr ""
+
+#: templates/questions/survey/choice.php:70
+msgid "- Select an option -"
+msgstr ""

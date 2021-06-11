@@ -1,0 +1,136 @@
+/**
+ * NgSurvey styles
+ */
+#ngs {line-height: 1.15; font-size: 16px;}
+#ngs .card {max-width: 100%; padding: 0; margin: 0;}
+#ngs #questions-form .card-header, #ngs #survey-reports .card-header {padding: 0; margin: 0;}
+#ngs .card-header .btn-link, #ngs .card-header .btn-link:active {text-decoration: none;} 
+#ngs .card-header .btn-link:active, #ngs .card-header .btn-link:focus, #ngs .nav-tabs .nav-link:active, #ngs .nav-tabs .nav-link:focus {box-shadow: unset;}
+#ngs .collapse .list-group {margin-top: 1px;}
+#ngs .btn-add-question .dashicons, #ngs .card-header .btn-link .dashicons {vertical-align: text-bottom;}
+#ngs .question .question-options input[type="text"], #ngs .questions .question-options select {max-width: 25rem;}
+#ngs .page-heading .dashicons {font-size: 2rem; margin-right: 1rem;}
+#ngs .accordion-button a:hover, #ngs .accordion-button a:focus {box-shadow: 0;}
+#ngs .accordion-button .btn-link {text-decoration: none;}
+#ngs .accordion-button::after {display: none;} 
+#ngs a.disabled {pointer-events: none !important; cursor: default; color:Gray;}
+#ngs .modal.fullscreen {z-index: 99999;}
+.swal2-container, .swal2-popup, .select2-dropdown {z-index: 99999}
+
+#ngs .tabs-left, #ngs .tabs-right {border-bottom: none; padding-top: 2px;}
+#ngs .tabs-left {border-right: 1px solid #ddd;}
+#ngs .tabs-right {border-left: 1px solid #ddd;}
+#ngs .tabs-left>li, #ngs .tabs-right>li {float: none; margin-bottom: 2px;}
+#ngs .tabs-left>li {margin-right: -1px;}
+#ngs .tabs-right>li {margin-left: -1px;}
+#ngs .tabs-left>li.active>a, #ngs .tabs-left>li.active>a:hover, #ngs .tabs-left>li.active>a:focus {border-bottom-color: #ddd; border-right-color: transparent;}
+#ngs .tabs-right>li.active>a, #ngs .tabs-right>li.active>a:hover, #ngs .tabs-right>li.active>a:focus {border-bottom: 1px solid #ddd; border-left-color: transparent;}
+#ngs .tabs-left>li>a {border-radius: 4px 0 0 4px; margin-right: 0; display:block;}
+#ngs .tabs-right>li>a {border-radius: 0 4px 4px 0; margin-right: 0;}
+
+.dashicons.spin {animation: dashicons-spin 1s infinite; animation-timing-function: linear;}
+@keyframes dashicons-spin {0% {transform: rotate( 0deg );} 100% {transform: rotate( 360deg );}}
+ 
+ /*! LOADERS **/
+ @keyframes loader-animate {0% {background-position: -468px 0} 100% {background-position: 468px 0}}
+.ng-loader {width: 100%; clear: both; background: #fff; display: block; padding: 12px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-height: 150px;}
+.ng-loader .ng-container {width:100%; height: 30px;}
+.ng-loader .ng-one,.ng-loader .ng-two,.ng-loader .ng-three,.ng-loader .ng-four,.ng-loader .ng-five,.ng-loader .ng-six {position:relative; background-color: #CCC; height: 6px; animation-name: loader-animate; animation-duration: 2s; animation-iteration-count: infinite; 
+	animation-timing-function: linear; background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee)); background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+	background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%); -webkit-background-size: 800px 104px;}
+.ng-loader .ng-one {left:0; height: 40px; width: 40px;}
+.ng-loader .ng-two {left:50px; top:-33px; width: 25%;}
+.ng-loader .ng-three {left:50px; top:-20px; width: 15%;}
+.ng-loader .ng-four {left:0px; top:30px; width: 80%;}
+.ng-loader .ng-five {left:0px; top:45px; width: 90%;}
+.ng-loader .ng-six {left:0px; top:60px; width: 50%;}
+/** END LOADERS **/
+
+/*! Query builder overrides */
+#ngs .query-builder .drag-handle, 
+#ngs .query-builder .error-container, 
+#ngs .query-builder .rule-container .rule-filter-container, 
+#ngs .query-builder .rule-container .rule-operator-container, 
+#ngs .query-builder .rule-container .rule-value-container {display: block;}
+#ngs .select2-selection ul {margin-bottom: 0;}
+#ngs .select2-container .dashicons {vertical-align: text-bottom; margin-right: 5px;}
+.select2-container .dashicons {margin-right: 5px;}
+#ngs #rules .form-control {width: 100%;}
+
+/*! Data tables overrides */
+#ngs .dataTables_wrapper .dataTables_processing_spinner {position: absolute; top: 50%; left: 50%; width: 200px; margin-left: -100px; margin-top: -26px; text-align: center; padding: 1em 0;}
+
+/*! NPS Question overrides */
+#ngs .nps-score-details .nps-score {font-size: 3rem; font-weight: bolder!important;}
+#ngs .nps-score-details .nps-label {font-weight: bolder!important;}
+#ngs .nps-results .nps-result-title {font-weight: bolder!important; margin-bottom: 10px;}
+#ngs .nps-results .nps-result-value {font-size: 2rem; margin-bottom: 10px;}
+#ngs .nps-results .nps-result-percent {font-size: 0.75rem;}
+#ngs .nps-chart .nps-chart-values-num {font-size: 1.2rem;}
+#ngs .nps-chart .nps-chart-percent {font-size: 1.5rem;}
+#ngs .nps-answers .score {font-size: 2rem;}
+
+/*! Response details */
+#ngs .questions .question {margin-bottom: 3rem;}
+#ngs .questions .question .question-title {font-size: 1.25rem; font-weight: 400;}
+#ngs .questions .question .card-header {padding: 0.75rem 1.25rem;}
+#ngs .sortable a {text-decoration: none;}
+#ngs .nps-values {margin-bottom: 2px;}
+#ngs .nps-values .nps-value {padding: 0; margin: 0; width: 40px; height: 40px; line-height: 40px; text-align: center; vertical-align: middle; border-collapse: collapse; text-decoration: none; border-radius: 0;}
+#ngs .nps-hints {font-size: 0.6rem;}
+#ngs .nps-hints .nps-hint {display: flex; align-items: center; text-align: center;}
+#ngs .nps-hints .nps-hint::before, #ngs .nps-hints .nps-hint::after {content: ''; flex: 1; border-bottom: 1px solid #000; border-left: 1px solid #000;}
+#ngs .nps-hints .nps-hint::before {margin-right: .25em;}
+#ngs .nps-hints .nps-hint::after {margin-left: .25em;}
+#ngs .nps-hints .nps-hint.detractors {width: 240px; color: #dc3545!important;}
+#ngs .nps-hints .nps-hint.detractors::before, #ngs .nps-hints .nps-hint.detractors::after {border-color: #dc3545!important;}
+#ngs .nps-hints .nps-hint.passive {width: 80px; color: #dc3545!important;}
+#ngs .nps-hints .nps-hint.passive::before, #ngs .nps-hints .nps-hint.passive::after {border-color: #ffc107!important;}
+#ngs .nps-hints .nps-hint.promotors {width: 80px; color: #28a745!important;}
+#ngs .nps-hints .nps-hint.promotors::before, #ngs .nps-hints .nps-hint.promotors::after {border-color: #28a745!important;}
+@media (max-width: 576px) {
+	#ngs .nps-values .nps-value {width: 30px; height: 30px; line-height: 30px;}
+	#ngs .nps-hints {font-size: 0.5rem;}
+	#ngs .nps-hints .nps-hint.detractors {width: 180px;}
+	#ngs .nps-hints .nps-hint.passive, #ngs .nps-hints .nps-hint.promotors {width: 60px;}
+}
+@media (min-width: 992px) {
+	#ngs .nps-values .nps-value {width: 50px; height: 50px; line-height: 50px;}
+	#ngs .nps-hints {font-size: 0.7rem;}
+	#ngs .nps-hints .nps-hint.detractors {width: 300px;}
+	#ngs .nps-hints .nps-hint.passive, #ngs .nps-hints .nps-hint.promotors {width: 100px;}
+}
+
+/*! Dashboard */
+#ngs .dashboard-stat-icon span {font-size: 96px; text-align: center; vertical-align: middle;}
+
+/*! RateIt | v1.1.2 / 03/28/2019 https://github.com/gjunge/rateit.js | Twitter: @gjunge */
+#ngs .rateit {display: -moz-inline-box; cursor: pointer; display: inline-block; position: relative; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none;}
+#ngs .rateit .rateit-range {position: relative; display: -moz-inline-box; display: inline-block; background: url(../images/star.gif); height: 16px; outline: none;}
+#ngs .rateit .rateit-range * {display: block;}
+#ngs .rateit .rateit-hover, 
+#ngs .rateit .rateit-selected {position: absolute; left: 0; top: 0; width: 0;}
+#ngs .rateit .rateit-hover-rtl, 
+#ngs .rateit .rateit-selected-rtl {left: auto; right: 0;}
+#ngs .rateit .rateit-hover {background: url(../images/star.gif) left -32px; color: rgb(239, 197, 41);}
+#ngs .rateit .rateit-hover-rtl {background-position: right -32px;}
+#ngs .rateit .rateit-selected {background: url(../images/star.gif) left -16px; color: rgb(191,66,66);}
+#ngs .rateit .rateit-selected-rtl {background-position: right -16px;}
+#ngs .rateit .rateit-preset {background: url(../images/star.gif) left -48px; color: rgb(239, 107, 34);}
+#ngs .rateit .rateit-preset-rtl {background: url(../images/star.gif) left -48px;}
+#ngs .rateit button.rateit-reset {background: url(../images/delete.gif) 0 0; margin: 4px; width: 16px; height: 16px; display: -moz-inline-box; display: inline-block; float: left; outline: none; border: none; padding: 0;}
+#ngs .rateit .rateit-reset span {display: none;}
+#ngs .rateit button.rateit-reset:hover, 
+#ngs .rateit button.rateit-reset:focus {background-position: 0 -16px;}
+#ngs .rateit-font {font-size: 24px; line-height: 1em;}
+#ngs .rateit-font .rateit-range {background: none; height: auto;}
+#ngs .rateit-font .rateit-empty {color: #ccc;}
+#ngs .rateit-font .rateit-range > div, 
+#ngs .rateit-font .rateit-range > span {background: none; overflow: hidden; cursor: default;}
+#ngs .rateit.rateit-font .rateit-reset {font-size: inherit; background: none; width: 0.6em; height: 0.6em; margin-top: 0.2em; background: gray; border-radius: 50%; osition: relative;}
+#ngs .rateit.rateit-font .rateit-reset span {display: block; font-weight: bold; color: white; height: calc(50% - 0.045em); top: 0; position: absolute; border-bottom: 0.09em solid white; width: 72%; margin-left: 14%;}
+#ngs .rateit.rateit-font .rateit-reset:hover, 
+#ngs .rateit.rateit-font button.rateit-reset:focus { background: #e6574b; background: radial-gradient(ellipse at center, #e6574b 55%,#f6836b 77%,#f9d3cc 100%); background-position: 0 0;}
+#ngs .rateit-icon .rateit-range {background: url(../images/stars-black-24dp.svg); height: 24px; fill: #ccc;}
+#ngs .rateit-icon .rateit-selected {background: url(../images/stars-red-24dp.svg); height: 24px;}
+#ngs .rateit-icon .rateit-hover {background: url(../images/stars-white-24dp.svg); height: 24px;}
