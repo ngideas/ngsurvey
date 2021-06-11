@@ -1,0 +1,44 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  release:
+    types: [published]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set env
+        run: |
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+      - name: Create Release Folder
+        run: rsync -arv --exclude={'*.git*','node_modules/*','.*','*/.*','CODE_OF_CONDUCT.md','CONTRIBUTING.md','ISSUE_TEMPLATE.md','PULL_REQUEST_TEMPLATE.md','*.dist','composer.*','dev-helpers**'} . ./${{ env.REPOSITORY_NAME }}
+
+      - name: Build project
+        run: |
+          mkdir -p build
+      - name: Package plugin
+        run: zip -r build/${{ env.REPOSITORY_NAME }}_v${{ env.RELEASE_VERSION }}.zip ${{ env.REPOSITORY_NAME }}
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v0.1.5
+        with:
+          files: build/${{ env.REPOSITORY_NAME }}_v${{ env.RELEASE_VERSION }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
