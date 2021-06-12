@@ -21,7 +21,7 @@ This will download the latest developer copy of NgSurvey to your computer.
 If you find an issue, let us know [here](https://github.com/ngideas/ngsurvey/issues?state=open)!
 
 ## Support ##
-This is a developer's portal for NgIdeas and should _not_ be used for support. Please visit the [support page](https://ngideas.com/support) if you need to ask us a question. Discuss on topics related to NgSurvey on the [Discussions Page](https://github.com/ngideas/ngsurvey/discussions)
+This is a developer's portal for NgIdeas and should _not_ be used for support. Please visit the [support page](https://ngideas.com/support) if you need to ask us a question. Discuss on topics related to NgSurvey on the [Support Page](https://wordpress.org/support/plugin/ngsurvey/)
 
 ## Contributions ##
 Anyone is welcome to contribute to NgIdeas. Please read the [guidelines for contributing](https://github.com/ngideas/ngsurvey/blob/master/CONTRIBUTING.md) to this repository.
