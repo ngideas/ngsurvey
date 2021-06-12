@@ -232,7 +232,9 @@ No. NgSurvey is a open source software and its core features are always free. Yo
 10. Devices Report
 11. Platforms Report
 12. Browsers Report
-13. Survey Response
+13. Locations Report
+14. Survey Response
+15. Survey Response 2
 
 == Changelog ==
 
