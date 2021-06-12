@@ -4,7 +4,7 @@ Plugin URI: https://ngideas.com
 Donate link: https://ngideas.com/donate/
 Contributors: ngideas
 Tags: surveys, polls, forms, feedback form
-Requires at least: 5.0
+Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.7
 Stable tag: 1.0.0
@@ -38,28 +38,28 @@ NgSurvey comes bundled with most useful question types.
  * Number type question
  * Email type question
 
-Many more question types available on Pro version:
+Many more question types available on questions bundle extension:
 
-* Net Promoter Score or NPS questions. Know what your customers/employees thinking about your products/services/company.
-* Choice Grid - Combine multiple similar questions with same set of answers into a grid type questions.
+* **Net Promoter Score** or NPS questions. Know what your customers/employees thinking about your products/services/company.
+* **Choice Grid** - Combine multiple similar questions with same set of answers into a grid type questions.
  * Radio buttons grid layout
  * Checkboxes grid layout
-* Choice Images - Images quickly attract users, allow your users to select images instead of plan text answers.
+* **Choice Images** - Images quickly attract users, allow your users to select images instead of plan text answers.
  * Single selection Image type
  * Multiple selection Images
-* Star ratings - Rate products/services with star ratings.
-* Match the following - Allow the users to match an answer from list of answers for each question.
-* Rank answers - Rank the answers by drag and drop in desired order.
-* Multi Sliders - Choose the answers by dragging the sliders. The answers can be predefined or numeric.
+* **Star ratings** - Rate products/services with star ratings.
+* **Match the following** - Allow the users to match an answer from list of answers for each question.
+* **Rank answers** - Rank the answers by drag and drop in desired order.
+* **Multi Sliders** - Choose the answers by dragging the sliders. The answers can be predefined or numeric.
  * Single slider
  * Multiple sliders
-* Postal address - Get full postal address of your users including country and region selections.
-* Map Location - Search for a location and show a pin on the map of that location.
-* Signature pad - Draw your signature on the screen with mouse pointer or on your phone with touch.
-* URL parameter - Automatically capture data from survey URLs.
-* Calendar input - Select the date and time using calendar input questions.
-* Person name - input. Get the full name of the person including salutation, first and last name.
-* Multiline [Textarea](https://ngideas.com/product/textarea-question-type/) input. Get detailed answers with multiline textarea type questions.
+* **Postal address** - Get full postal address of your users including country and region selections.
+* **Map Location** - Search for a location and show a pin on the map of that location.
+* **Signature pad** - Draw your signature on the screen with mouse pointer or on your phone with touch.
+* **URL parameter** - Automatically capture data from survey URLs.
+* **Calendar input** - Select the date and time using calendar input questions.
+* **Person name** - input. Get the full name of the person including salutation, first and last name.
+* **Multiline Textarea** input. Get detailed answers with multiline textarea type questions.
 
 == Extensions ==
 Extend functionality with ready to use extensions.
