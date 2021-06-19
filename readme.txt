@@ -16,6 +16,11 @@ Create rich and powerful surveys in minutes. conditional/skip logic, advanced re
 == Description ==
 NgSurvey allows you to create full featured self-hosted surveys with the easy to use, ajax powered form builder. Here are few important features.
 
+= Live demo =
+Checkout the live demo of the surveys on our demo site. Download survey json files and import them to your website using Import/Export plugin.
+
+[Click here to access the demo site](https://wordpress.org/plugins/ngsurvey/)
+
 = Quick overview =
 * Create the questionnaire with the Ajax powered modern form builder. Quickly view and change entire questionnaire at a time. Questions are fully customized with options to provide CSS class names.
 * Allows you to organize your questionnaire into multiple pages. Create a one page small survey to multipage large surveys with less effort.
