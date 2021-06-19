@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.7
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -243,9 +243,15 @@ No. NgSurvey is a open source software and its core features are always free. Yo
 
 == Changelog ==
 
+= 1.0.1: Jun 19, 2021 =
+* [New] Bump up datatables version
+
 = 1.0.0: Jun 8, 2021 =
-* First release, Hello NgSurvey!
+* [New] First release, Hello NgSurvey!
 
 == Upgrade Notice ==
+= 1.0.1 =
+WordPress minimum required version is updated to 4.9
+
 = 1.0.0 =
 Initial release
