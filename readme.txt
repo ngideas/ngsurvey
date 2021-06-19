@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.7
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ NgSurvey allows you to create full featured self-hosted surveys with the easy to
 = Live demo =
 Checkout the live demo of the surveys on our demo site. Download survey json files and import them to your website using Import/Export plugin.
 
-[Click here to access the demo site](https://wordpress.org/plugins/ngsurvey/)
+[Click here to access the demo site](https://demo.ngideas.com/surveys/demo-surveys/)
 
 = Quick overview =
 * Create the questionnaire with the Ajax powered modern form builder. Quickly view and change entire questionnaire at a time. Questions are fully customized with options to provide CSS class names.
@@ -242,6 +242,9 @@ No. NgSurvey is a open source software and its core features are always free. Yo
 15. Survey Response 2
 
 == Changelog ==
+
+= 1.0.2: Jun 19, 2021 =
+* [Fix] Correcting demo site url in wp readme.txt
 
 = 1.0.1: Jun 19, 2021 =
 * [New] Bump up datatables version
