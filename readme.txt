@@ -19,10 +19,13 @@ NgSurvey allows you to create full featured self-hosted surveys with the easy to
 = Live demo =
 Checkout the live demo of the surveys on our demo site. Download survey json files and import them to your website using Import/Export plugin.
 
+[Click here to access the demo site](https://demo.ngideas.com/surveys/demo-surveys/)
+
+= Documentation = 
+We compiled a detailed documentation on how to quickly create and manage the surveys. Please read NgSurvey documentation at [https://docs.ngideas.com/](https://docs.ngideas.com/)
+
 = Found a bug? =
 Report bugs and contribute to the project on our GitHub repository at [https://github.com/ngideas/ngsurvey](https://github.com/ngideas/ngsurvey)
-
-[Click here to access the demo site](https://demo.ngideas.com/surveys/demo-surveys/)
 
 = Quick overview =
 * Create the questionnaire with the Ajax powered modern form builder. Quickly view and change entire questionnaire at a time. Questions are fully customized with options to provide CSS class names.
