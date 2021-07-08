@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.7
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,12 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+
+= 1.0.3: Jul 7, 2021 =
+* [Doc] Correcting the demo site URL in wp readme file
+* [Doc] Updating wp readme file to include most relevant information
+* [Dep] Bump monolog/monolog from 2.2.0 to 2.3.0
+* [Dep] Bump woocommerce/action-scheduler from 3.2.0 to 3.2.1
 
 = 1.0.2: Jun 19, 2021 =
 * [Fix] Correcting demo site url in wp readme.txt
