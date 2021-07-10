@@ -25,11 +25,11 @@ $question   = $data;
     	{
     		?>
     		<div class="row row-cols-lg-auto g-3 align-items-center mb-3 answer">
-    			<div class="col-12">
+    			<div class="col-6">
         			<input type="text" name="ngform[answer_title][]" value="<?php echo esc_attr( $answer->title ); ?>" tabindex="<?php echo $i + 100 + 1; ?>"
         				placeholder="<?php echo esc_attr__('Enter your answer', 'ngsurvey' );?>" class="form-control me-2 required" size="60">
         		</div>
-    			<div class="col-12">
+    			<div class="col-6">
         			<span class="answer-controls me-2">
         				<a class="btn-remove-answer" href="javascript:void(0)" title="<?php echo esc_attr__( 'Delete', 'ngsurvey'); ?>" data-bs-toggle="tooltip">
             				<span class="dashicons dashicons-trash"></span>
@@ -54,10 +54,10 @@ $question   = $data;
     
     <div class="answer-template" style="display: none;">
     	<div class="row row-cols-lg-auto g-3 align-items-center mb-3 answer">
-    		<div class="col-12">
+    		<div class="col-6">
     			<input type="text" name="answer_title" value="" placeholder="<?php echo esc_attr__('Enter your answer', 'ngsurvey' );?>" class="form-control me-2 required" size="60">
     		</div>
-    		<div class="col-12">
+    		<div class="col-6">
         		<span class="answer-controls me-2">
         			<a class="btn-remove-answer" href="javascript:void(0)" title="<?php echo esc_attr__( 'Delete', 'ngsurvey'); ?>" data-bs-toggle="tooltip">
         				<span class="dashicons dashicons-trash"></span>
