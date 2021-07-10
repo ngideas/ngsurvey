@@ -4704,19 +4704,19 @@ body {
   margin: 0.5rem;
   pointer-events: none;
 }
-.modal.fade #ngs .modal-dialog {
+#ngs .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
 }
 @media (prefers-reduced-motion: reduce) {
-  .modal.fade #ngs .modal-dialog {
+  #ngs .modal.fade .modal-dialog {
     transition: none;
   }
 }
-.modal.show #ngs .modal-dialog {
+#ngs .modal.show .modal-dialog {
   transform: none;
 }
-.modal.modal-static #ngs .modal-dialog {
+#ngs .modal.modal-static .modal-dialog {
   transform: scale(1.02);
 }
 #ngs .modal-dialog-scrollable {
@@ -4746,7 +4746,7 @@ body {
   border-radius: 0.3rem;
   outline: 0;
 }
-#ngs .modal-backdrop {
+.modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -4755,10 +4755,10 @@ body {
   height: 100vh;
   background-color: #000;
 }
-#ngs .modal-backdrop.fade {
+.modal-backdrop.fade {
   opacity: 0;
 }
-#ngs .modal-backdrop.show {
+.modal-backdrop.show {
   opacity: 0.5;
 }
 #ngs .modal-header {

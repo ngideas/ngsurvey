@@ -140,7 +140,7 @@ $groups     = $data->extensions;
     					<form action="index.php" name="license-activation-form" method="post" class="needs-validation" novalidate>
         					<div class="mb-3">
         						<label for="license-email" class="form-label"><?php echo esc_html__( 'Email address', 'ngsurvey' );?>:</label>
-        						<input type="email" class="form-control" name="license-email" id="license-email" value="<?php echo esc_attr__( 'Enter email address', 'ngsurvey' );?>" required="required">
+        						<input type="email" class="form-control" name="license-email" id="license-email" value="" required="required" placeholder="<?php echo esc_attr__( 'Enter email address', 'ngsurvey' );?>">
         						<small id="help_license-email" class="form-text text-muted"><?php echo esc_html__( 'Enter the email id used for the purchase', 'ngsurvey' );?></small>
         					</div>
         					<div class="mb-3">

@@ -176,7 +176,7 @@ class NgSurvey_Admin {
 	            $scripts[ 'ngsurvey-reports' ] = NGSURVEY_URL . 'assets/admin/js/reports.js';
 	            break;
 
-	        case 'extensions':
+	        case 'ngsurvey_extensions':
 	            $scripts[ 'ngsurvey-extensions' ] = NGSURVEY_URL . 'assets/admin/js/extensions.js';
 	            break;
 
