@@ -19,7 +19,15 @@ final class Utils
     {
         $class = \get_class($object);
 
-        return 'c' === $class[0] && 0 === strpos($class, "class@anonymous\0") ? get_parent_class($class).'@anonymous' : $class;
+        if (false === ($pos = \strpos($class, "@anonymous\0"))) {
+            return $class;
+        }
+
+        if (false === ($parent = \get_parent_class($class))) {
+            return \substr($class, 0, $pos + 10);
+        }
+
+        return $parent . '@anonymous';
     }
 
     public static function substr(string $string, int $start, ?int $length = null): string
@@ -138,6 +146,8 @@ final class Utils
      * @param  int               $code return code of json_last_error function
      * @param  mixed             $data data that was meant to be encoded
      * @throws \RuntimeException
+     *
+     * @return never
      */
     private static function throwEncodeError(int $code, $data): void
     {
@@ -186,6 +196,9 @@ final class Utils
                 },
                 $data
             );
+            if (!is_string($data)) {
+                throw new \RuntimeException('Failed to preg_replace_callback: '.preg_last_error().' / '.preg_last_error_msg());
+            }
             $data = str_replace(
                 ['¤', '¦', '¨', '´', '¸', '¼', '½', '¾'],
                 ['€', 'Š', 'š', 'Ž', 'ž', 'Œ', 'œ', 'Ÿ'],
