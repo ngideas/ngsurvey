@@ -15,7 +15,7 @@
  * Plugin Name:         NgSurvey
  * Plugin URI:          https://ngideas.com/
  * Description:         Next generation open source surveys for Wordpress is here. Create feature rich surveys on your wordpress site and get feedback from your users.  
- * Version:             1.0.4
+ * Version:             1.0.5
  * Author:              NgIdeas
  * Author URI:          https://ngideas.com/
  * License:             GPL-2.0+
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  */
-define( 'NGSURVEY_VERSION', '1.0.4' );
+define( 'NGSURVEY_VERSION', '1.0.5' );
 
 /**
  * The code that runs during plugin activation.
