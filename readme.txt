@@ -6,7 +6,7 @@ Contributors: ngideas
 Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.7
+Tested up to: 5.8
 Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -121,6 +121,11 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.0.4: Jul 17, 2021 =
+* [Fix] Extension activation modal dialog is not showing
+* [Fix] Choice form answer field and buttons are not aligned properly
+* [Dep] Bump up bootstrap version to 5.0.2
+* [Doc] WordPress 5.8 compatibility
 
 = 1.0.3: Jul 7, 2021 =
 * [Doc] Correcting the demo site URL in wp readme file

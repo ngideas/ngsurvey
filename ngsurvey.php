@@ -13,7 +13,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:         NgSurvey
- * Plugin URI:          https://ngideas.com/ngsurvey/
+ * Plugin URI:          https://ngideas.com/
  * Description:         Next generation open source surveys for Wordpress is here. Create feature rich surveys on your wordpress site and get feedback from your users.  
  * Version:             1.0.3
  * Author:              NgIdeas
