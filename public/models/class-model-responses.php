@@ -193,7 +193,7 @@ class NgSurvey_Model_Responses extends NgSurvey_Model {
                 $response = $wpdb->get_row( $wpdb->prepare(
                     "SELECT r.id, r.created_by, r.created_date_gmt, r.finished_date_gmt ".
                     "FROM {$wpdb->prefix}ngs_responses r ".
-                    "INNER JOIN {$wpdb->prefix}ngs_tracking t ON r.post_id = r.id AND t.post_type = 2 ".
+                    "INNER JOIN {$wpdb->prefix}ngs_tracking t ON t.post_id = r.id AND t.post_type = 2 ".
                     "WHERE survey_id = %d AND t.ip_address = %s",
                     $survey_id, $ip_address
                 ), 'ARRAY_A' );
