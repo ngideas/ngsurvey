@@ -20,21 +20,21 @@
             'dev_requirement' => false,
         ),
         'matomo/device-detector' => array(
-            'pretty_version' => '4.2.3',
-            'version' => '4.2.3.0',
+            'pretty_version' => '4.3.0',
+            'version' => '4.3.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../matomo/device-detector',
             'aliases' => array(),
-            'reference' => 'd879f07496d6e6ee89cef5bcd925383d9b0c2cc0',
+            'reference' => '3fcceafc601444412ce65297ba4ce878ee77e450',
             'dev_requirement' => false,
         ),
         'monolog/monolog' => array(
-            'pretty_version' => '2.3.1',
-            'version' => '2.3.1.0',
+            'pretty_version' => '2.3.2',
+            'version' => '2.3.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../monolog/monolog',
             'aliases' => array(),
-            'reference' => '9738e495f288eec0b187e310b7cdbbb285777dbe',
+            'reference' => '71312564759a7db5b789296369c1a264efc43aad',
             'dev_requirement' => false,
         ),
         'mustangostang/spyc' => array(
@@ -58,7 +58,7 @@
         'piwik/device-detector' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '4.2.3',
+                0 => '4.3.0',
             ),
         ),
         'psr/log' => array(
