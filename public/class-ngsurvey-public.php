@@ -132,8 +132,19 @@ class NgSurvey_Public {
 	 */
 	public function enqueue_styles( $hook = null ) {
 	    global $post;
+	    
+	    $render_styles = get_post_type() == NGSURVEY_CPT_NAME || ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'ngsurvey') );
+	    
+	    /**
+	     * Applies the filter to determine if the NgSurvey styles can be rendered.
+	     * By default the styles are rendered only on the NgSurvey pages which can be overridden using this filter.
+	     * 
+	     * @param boolean $render_styles
+	     * @since 1.0.6
+	     */
+	    $render_styles = apply_filters( 'ngsurvey_render_styles', $render_styles );
 
-	    if( get_post_type() != NGSURVEY_CPT_NAME  && is_a( $post, 'WP_Post' ) && !has_shortcode( $post->post_content, 'ngsurvey')  ) {
+	    if( !$render_styles ) {
 	        return;
 	    }
 	    
@@ -185,7 +196,18 @@ class NgSurvey_Public {
 	public function enqueue_scripts( $hook, $skipCheck = false ) {
 	    global $post;
 
-	    if( get_post_type() != NGSURVEY_CPT_NAME && is_a( $post, 'WP_Post' ) && !has_shortcode( $post->post_content, 'ngsurvey') ) {
+	    $render_scripts = get_post_type() == NGSURVEY_CPT_NAME || ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'ngsurvey') );
+	    
+	    /**
+	     * Applies the filter to determine if the NgSurvey scripts can be rendered.
+	     * By default the scripts are rendered only on the NgSurvey pages which can be overridden using this filter.
+	     *
+	     * @param boolean $render_scripts
+	     * @since 1.0.6
+	     */
+	    $render_scripts = apply_filters( 'ngsurvey_render_scripts', $render_scripts );
+	    
+	    if( !$render_scripts ) {
 	        return;
 	    }
 	    
