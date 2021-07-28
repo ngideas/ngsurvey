@@ -122,9 +122,12 @@ Please post your query on the plugin support page. You are welcome to contribute
 
 == Changelog ==
 = 1.0.6: Jul 28, 2021 =
+* [New] New ngsurvey_render_styles & ngsurvey_render_scripts filters
 * [Bug] Fixed issue with wrong db alias used when ip tracking enabled
 * [Dep] Bump monolog/monolog from 2.3.1 to 2.3.2
 * [Dep] Bump matomo/device-detector from 4.2.3 to 4.3.0
+* [Doc] Update extensions page with new ngideas urls.
+* [Dev] Extend NgSurvey_Extension class from NgSurvey_Controller
 
 = 1.0.5: Jul 17, 2021 =
 * [Fix] Fix build version
