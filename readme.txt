@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,11 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.0.6: Jul 28, 2021 =
+* [Bug] Fixed issue with wrong db alias used when ip tracking enabled
+* [Dep] Bump monolog/monolog from 2.3.1 to 2.3.2
+* [Dep] Bump matomo/device-detector from 4.2.3 to 4.3.0
+
 = 1.0.5: Jul 17, 2021 =
 * [Fix] Fix build version
 
