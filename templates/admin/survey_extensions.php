@@ -112,7 +112,7 @@ $groups     = $data->extensions;
             						<p class="card-text"><?php echo wp_kses_post( $product[ 'description' ] );?></p>
             					</div>
             					<div class="card-footer">
-            						<a href="<?php echo esc_attr( $product[ 'url' ] );?>" target="_blank"><?php echo esc_html__( 'Learn more', 'ngsurvey' );?></a>
+            						<a href="<?php echo esc_attr( $product[ 'url' ] );?>" target="_blank"><?php echo esc_html__( 'Get it now', 'ngsurvey' );?></a>
             					</div>
             				</div>
             			</div>
