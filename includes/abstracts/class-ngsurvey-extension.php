@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @link       https://ngideas.com
  * @since      1.0.0
  */
-abstract class NgSurvey_Extension extends NgSurvey_Base {
+abstract class NgSurvey_Extension extends NgSurvey_Controller {
 
     /**
 	 * Define the base question type functionality of the plugin.

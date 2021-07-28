@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @link       https://ngideas.com
  * @since      1.0.0
  */
-abstract class NgSurvey_Controller {
+abstract class NgSurvey_Controller extends NgSurvey_Base {
 
 	/**
 	 * The unique identifier of this plugin.
@@ -36,33 +36,6 @@ abstract class NgSurvey_Controller {
 	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
-
-	/**
-	 * The current version of the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      string    $version    The current version of the plugin.
-	 */
-	protected $version;
-	
-	/**
-	 * The title of the list.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      string    $version    The current version of the plugin.
-	 */
-	public $title;
-	
-	/**
-	 * The template loader object.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      string    $template    The template loader object.
-	 */
-	public $template;
 
 	/**
 	 * Define the base controller of the plugin.
@@ -95,6 +68,8 @@ abstract class NgSurvey_Controller {
 	    } else {
 	        $this->template = new NgSurvey_Template_Loader();
 	    }
+	    
+	    parent::__construct( $config );
 	}
 
 	/**

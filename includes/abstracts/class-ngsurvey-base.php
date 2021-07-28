@@ -45,7 +45,7 @@ abstract class NgSurvey_Base {
 	 * @var      string    $type    The title of the plugin
 	 */
 	public $title = null;
-
+	
 	/**
 	 * The current version of the plugin.
 	 *
@@ -72,7 +72,7 @@ abstract class NgSurvey_Base {
 	 * @var      string    $plugin_file    The plugin file.
 	 */
 	public $plugin_file;
-
+	
 	/**
 	 * Define the base controller of the plugin.
 	 *
@@ -109,18 +109,6 @@ abstract class NgSurvey_Base {
 	        
 	        $this->plugin_file = $config[ 'plugin_file' ];
 	    }
-	    
-	    /*
-	     * Register the activation script to build the media files.
-	     * While activation, the activated plugin script shall be included.
-	     */
-	    register_activation_hook( $this->plugin_file, array( $this, 'build_plugin_scripts' ) );
-	    
-	    /*
-	     * Register the deactivation script to build the media files.
-	     * While deactivation, the activated plugin script shall be excluded.
-	     */
-	    register_deactivation_hook( $this->plugin_file, array( $this, 'build_plugin_scripts' ) );
 	}
 
 	/**
@@ -165,26 +153,13 @@ abstract class NgSurvey_Base {
 	    
 	    return $scripts;
 	}
-	
-	/**
-	 * Minify and combine all NgSurvey and NgSurvey Extension scripts.
-	 */
-	public function build_plugin_scripts() {
-	    
-	    $plugin_scripts = array();
-	    $plugin_scripts = apply_filters( 'ngsurvey_enqueue_admin_scripts', $plugin_scripts );
-
-	    foreach ( $plugin_scripts as $plugin_script ) {
-	        // Do something here: todo
-	    }
-	}
 
 	/**
 	 * Throws error and dies. Used in ajax response.
 	 * 
 	 * If no error code or message is provided, default unauthorised error will be thrown
 	 */
-	public function raise_error( $code = '001', $message = 'Unauthorised access' ) {
+	protected function raise_error( $code = '001', $message = 'Unauthorised access' ) {
 	    $error = new WP_Error( $code, __( $message, 'ngsurvey' ) );
 	    wp_send_json_error( $error );
 	}
