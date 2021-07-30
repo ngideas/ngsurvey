@@ -49,7 +49,7 @@ NgSurvey comes bundled with most useful question types.
  * Number type question
  * Email type question
 
-Many more question types available on questions bundle extension:
+Many more question types available on our premium plugin "NgSurvey Extensions":
 
 * **Net Promoter Score** or NPS questions. Know what your customers/employees thinking about your products/services/company.
 * **Choice Grid** - Combine multiple similar questions with same set of answers into a grid type questions.
@@ -73,15 +73,15 @@ Many more question types available on questions bundle extension:
 * **Multiline Textarea** input. Get detailed answers with multiline textarea type questions.
 
 == Extensions ==
-Extend functionality with ready to use extensions.
+Add more features with NgSurvey Extensions plugin.
 
-* [Campaigns](https://ngideas.com/product/ngsurvey-campaigns/) - Build your audience and invite them to take your surveys. Create and send HTML email invitations with built-in visual email builder.
-* [CSV Downloads](https://ngideas.com/product/ngsurvey-csv-downloads/) - Download all your responses data in a CSV file and analyze it on Excel or third party software.
-* [Emails](https://ngideas.com/product/ngsurvey-emails/) - Send automated surveys when your users purchase a product, respond to a survey and so on.
-* [Front-end management](https://ngideas.com/product/ngsurvey-front-end-management/) - Monetise surveys as a software-as-service business. Let your front-end users create and manage surveys on their own.
-* [MaxMind GeoIP Location](https://ngideas.com/product/ngsurvey-geoip-location/) - Capture your respondent location data such as country name, state/region name and city name.
-* [reCAPTCHA](https://ngideas.com/product/ngsurvey-recaptcha/) - Protect your responses from spammers by enabling reCAPTCHA validations to your guest responses.
-* [Import & Export](https://ngideas.com/product/ngsurvey-import-export/) - Export your survey to a JSON file and import to another site or use it to duplicate the surveys with one click importer.
+* Campaigns - Build your audience and invite them to take your surveys. Create and send HTML email invitations with built-in visual email builder.
+* CSV Downloads - Download all your responses data in a CSV file and analyze it on Excel or third party software.
+* Emails - Send automated surveys when your users purchase a product, respond to a survey and so on.
+* Front-end management - Monetise surveys as a software-as-service business. Let your front-end users create and manage surveys on their own.
+* MaxMind GeoIP Location - Capture your respondent location data such as country name, state/region name and city name.
+* reCAPTCHA - Protect your responses from spammers by enabling reCAPTCHA validations to your guest responses.
+* Import & Export - Export your survey to a JSON file and import to another site or use it to duplicate the surveys with one click importer.
 
 == Feature Tour ==
 Learn more about NgSurvey and read detailed information on NgSurvey features on the [feature tour page](https://ngideas.com/ngsurvey-features/)
