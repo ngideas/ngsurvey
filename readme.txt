@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,10 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.0.7: Aug 11, 2021 =
+[New] ngsurvey_end_of_survey_message hook now includes survey & response id parameters
+[Doc] Update plugin description with new features
+
 = 1.0.6: Jul 28, 2021 =
 * [New] New ngsurvey_render_styles & ngsurvey_render_scripts filters
 * [Bug] Fixed issue with wrong db alias used when ip tracking enabled
