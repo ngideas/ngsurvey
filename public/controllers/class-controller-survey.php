@@ -588,7 +588,7 @@ class NgSurvey_Controller_Survey extends NgSurvey_Controller {
 	    $html = ob_get_clean();
 	    
 	    // Filter the finalize page HTML message
-	    $html = apply_filters( 'ngsurvey_end_of_survey_message', $html );
+	    $html = apply_filters( 'ngsurvey_end_of_survey_message', $html, $survey, $response_id );
 	    
 	    /*
 	     * Complete all actions hooked to the survey response to perform end of survey operations.
