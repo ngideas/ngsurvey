@@ -60,7 +60,8 @@ class NGLOG
         $dir = trailingslashit( $uploads_dir[ 'basedir' ] ) . 'ngsurvey/logs';
         
         if ( ! file_exists( $dir ) ) {
-            mkdir($dir, FS_CHMOD_FILE, true);
+        	$chmodir = 0755 & ~ umask();
+        	mkdir($dir, $chmodir, true);
         }
         
         $formatter = new LineFormatter( LineFormatter::SIMPLE_FORMAT, LineFormatter::SIMPLE_DATE );

@@ -213,8 +213,9 @@ class NgSurvey_Activator {
 	    $basedir = trailingslashit( $upload_dir['path'] ) . 'logs';
 	    
 	    if( !$wp_filesystem->is_dir( $basedir ) ) {
+	    	$chmodir = 0755 & ~ umask();
 	        $wp_filesystem->mkdir( $basedir );
-	        $wp_filesystem->put_contents( trailingslashit( dirname( $basedir ) ) . '.htaccess', 'deny from all', FS_CHMOD_FILE );
+	        $wp_filesystem->put_contents( trailingslashit( dirname( $basedir ) ) . '.htaccess', 'deny from all', $chmodir );
 	    }
 	    
 	    global $wp_rewrite;
