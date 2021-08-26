@@ -71,7 +71,7 @@ class NgSurvey_AutoUpdate {
 				'user-agent' 	=> 'WordPress/' . $wp_version . '; ' . get_bloginfo( 'url' ) 
 			) );
 			
-			if ( is_wp_error( $data ) || $return['response']['code'] != 200 ) {
+			if ( is_wp_error( $return ) || $return['response']['code'] != 200 ) {
 				return $transient;
 			}
 
