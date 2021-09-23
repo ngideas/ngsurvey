@@ -43,7 +43,7 @@ class ComposerStaticInit43a9335424abd04dcf3689476f4562e7
         ),
         'Psr\\Log\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+            0 => __DIR__ . '/..' . '/psr/log/src',
         ),
         'Pelago\\Emogrifier\\' => 
         array (
