@@ -35,7 +35,8 @@ $groups     = $data->extensions;
 			<?php if( empty( $data->plugins ) ):?>
 			<div class="card card-default">
 				<div class="card-body">
-					<?php echo esc_html__( 'No extensions are installed. <a href="https://ngideas.com/extensions/" target="_blank">Get extensions here</a>.'); ?>
+					<?php echo esc_html__( 'No extensions are installed.', 'ngsurvey'); ?>
+					<a href="https://ngideas.com/pricing/" target="_blank"><?php echo esc_html__( 'Get extensions here', 'ngsurvey'); ?></a>
 				</div>
 			</div>
 			<?php else: ?>
