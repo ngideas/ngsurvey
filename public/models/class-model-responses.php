@@ -305,6 +305,9 @@ class NgSurvey_Model_Responses extends NgSurvey_Model {
         $userAgent              = $_SERVER['HTTP_USER_AGENT'];
         $parser                 = new DeviceDetector( $userAgent );
         $parser->parse();
+        
+        $client					= $parser->getClient();
+        $os						= $parser->getOs();
 
         $tracking   = array(
             'post_id'           => $response_id,
@@ -314,11 +317,11 @@ class NgSurvey_Model_Responses extends NgSurvey_Model {
             'country'           => $geographic['country'],
             'state'             => $geographic['state'],
             'city'              => $geographic['city'],
-            'browser_name'      => $parser->getClient()[ 'name' ],
-            'browser_version'   => $parser->getClient()[ 'version' ],
-            'browser_engine'    => $parser->getClient()[ 'engine' ],
-            'platform_name'     => $parser->getOs()[ 'name' ],
-            'platform_version'  => $parser->getOs()[ 'version' ],
+        	'browser_name'      => !empty( $client[ 'name' ] ) ? $client[ 'name' ] : '',
+        	'browser_version'   => !empty( $client[ 'version' ] ) ? $client[ 'version' ] : '',
+        	'browser_engine'    => !empty( $client[ 'engine' ] ) ? $client[ 'engine' ] : '',
+        	'platform_name'     => !empty( $os[ 'name' ] ) ? $os[ 'name' ] : '',
+        	'platform_version'  => !empty( $os[ 'version' ] ) ? $os[ 'version' ] : '',
             'device_type'       => $parser->getDeviceName(),
             'brand_name'        => $parser->getBrandName(),
             'model_name'        => $parser->getModel()

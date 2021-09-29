@@ -66,7 +66,7 @@ class NgSurvey_Public {
 	    
 	    $survey = get_post();
 
-	    if ( $survey->post_type == NGSURVEY_CPT_NAME && is_singular() && in_the_loop() && is_main_query() ) {
+	    if ( is_singular() && in_the_loop() && is_main_query() && $survey->post_type == NGSURVEY_CPT_NAME ) {
 	        
 	        require_once NGSURVEY_PATH . 'public/controllers/class-controller-survey.php';
 	        $controller = new NgSurvey_Controller_Survey( array(
