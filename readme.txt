@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,14 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.0.9: Oct 30, 2021 =
+* [Fix] Fixed notices shown on the apache error log
+* [Fix] Fixed the message shown when no extensions installed
+* [Dep] Bump woocommerce/action-scheduler from 3.3.0 to 3.4.0
+* [Dep] Bump matomo/device-detector from 4.3.0 to 4.3.1
+* [Dep] Bump monolog/monolog from 2.3.4 to 2.3.5
+* [Dep] Bump pelago/emogrifier from 5.0.1 to 6.0.0
+
 = 1.0.8: Sep 10, 2021 =
 * [Fix] Fixed issue with writing logs and activation
 * [Fix] Fixed issue with update checker timeouts
