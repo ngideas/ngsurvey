@@ -6,8 +6,8 @@ Contributors: ngideas
 Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.8
-Stable tag: 1.0.9
+Tested up to: 5.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,10 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.0.10: Jan 26, 2021 =
+* [Chg] Wordpress v5.9 compatiability
+* [Dep] Bump matomo/device-detector from 4.3.1 to 5.0.3
+
 = 1.0.9: Oct 30, 2021 =
 * [Fix] Fixed notices shown on the apache error log
 * [Fix] Fixed the message shown when no extensions installed
