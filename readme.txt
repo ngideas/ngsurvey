@@ -5,7 +5,7 @@ Donate link: https://ngideas.com/donate/
 Contributors: ngideas
 Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
-Requires PHP: 5.6
+Requires PHP: 7.2
 Tested up to: 5.9
 Stable tag: 1.0.10
 License: GPLv2 or later
@@ -123,6 +123,7 @@ Please post your query on the plugin support page. You are welcome to contribute
 == Changelog ==
 = 1.0.10: Jan 26, 2021 =
 * [Chg] Wordpress v5.9 compatiability
+* [Dep] Minimum PHP version required is 7.2
 * [Dep] Bump matomo/device-detector from 4.3.1 to 5.0.3
 
 = 1.0.9: Oct 30, 2021 =
