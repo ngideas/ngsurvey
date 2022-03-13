@@ -94,7 +94,7 @@ ksort($groups);
             	<span class="dashicons dashicons-info"></span> <?php echo esc_html__( 'Click on the question types on the left sidebar to add new questions.', 'ngsurvey' ); ?>
             </div>
             
-            <?php do_action( 'ngsurvey_before_loading_questions_form' );?>
+            <?php do_action( 'ngsurvey_before_loading_questions_form', $questions );?>
         
             <div class="accordion accordion-flush" id="questions">
             	<?php foreach ( $questions as $question ): ?>
@@ -102,7 +102,7 @@ ksort($groups);
             	<?php endforeach; ?>
             </div>
             
-            <?php do_action( 'ngsurvey_after_loading_questions_form' );?>
+            <?php do_action( 'ngsurvey_after_loading_questions_form', $questions );?>
         </div>
 	</div>
 </div>
