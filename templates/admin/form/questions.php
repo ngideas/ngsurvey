@@ -93,12 +93,16 @@ ksort($groups);
             <div class="alert alert-info" role="alert">
             	<span class="dashicons dashicons-info"></span> <?php echo esc_html__( 'Click on the question types on the left sidebar to add new questions.', 'ngsurvey' ); ?>
             </div>
+            
+            <?php do_action( 'ngsurvey_before_loading_questions_form' );?>
         
             <div class="accordion accordion-flush" id="questions">
             	<?php foreach ( $questions as $question ): ?>
             		<?php $template->set_template_data( array( 'question' => $question, 'template' => $template ) )->get_template_part( 'admin/form/question' ); ?>
             	<?php endforeach; ?>
             </div>
+            
+            <?php do_action( 'ngsurvey_after_loading_questions_form' );?>
         </div>
 	</div>
 </div>
