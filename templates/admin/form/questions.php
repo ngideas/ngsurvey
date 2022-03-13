@@ -66,9 +66,24 @@ ksort($groups);
                     			</select>
             				</div>
             				<div class="col-md-8">
-                    			<button type="button" class="btn btn-sm btn-primary btn-create-page"><span class="dashicons dashicons-plus"></span></button>
-                    			<button type="button" class="btn btn-sm btn-secondary btn-edit-page-title"><span class="dashicons dashicons-edit"></span></button>
-                    			<button type="button" class="btn btn-sm btn-danger btn-remove-page"><span class="dashicons dashicons-trash"></span></button>
+                    			<?php 
+                    			$buttons = array(
+                    			    array( 'name' => 'btn-create-page', 'icon' => 'dashicons dashicons-plus', 'class' => 'btn-primary', 'title' => __( 'Add page' , 'ngsurvey' ) ),
+                    			    array( 'name' => 'btn-edit-page-title', 'icon' => 'dashicons dashicons-edit', 'class' => 'btn-secondary', 'title' => __( 'Edit title', 'ngsurvey' ) ),
+                    			    array( 'name' => 'btn-remove-page', 'icon' => 'dashicons dashicons-trash', 'class' => 'btn-danger', 'title' => __( 'Remove page', 'ngsurvey' ) )
+                    			);
+                    			$buttons = apply_filters( 'ngsurvey_edit_questions_actions', $buttons );
+                    			
+                    			foreach ( $buttons as $button ) {
+                    			    ?>
+                    			    <button type="button" 
+                    			    	class="btn btn-sm <?php echo esc_attr( $button[ 'class' ] );?> me-1 <?php echo esc_attr( $button[ 'name' ] );?>" 
+                    			    	title="<?php echo esc_attr( $button[ 'title' ] );?>">
+                    			    	<span class="<?php echo esc_attr( $button[ 'icon' ] );?>"></span>
+                    			    </button>
+                    			    <?php
+                    			}
+                    			?>
                     		</div>
             			</div>
             		</div>
