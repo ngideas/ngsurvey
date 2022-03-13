@@ -68,9 +68,9 @@ ksort($groups);
             				<div class="col-md-8">
                     			<?php 
                     			$buttons = array(
-                    			    array( 'name' => 'btn-create-page', 'icon' => 'dashicons dashicons-plus', 'class' => 'btn-primary', 'title' => __( 'Add page' , 'ngsurvey' ) ),
-                    			    array( 'name' => 'btn-edit-page-title', 'icon' => 'dashicons dashicons-edit', 'class' => 'btn-secondary', 'title' => __( 'Edit title', 'ngsurvey' ) ),
-                    			    array( 'name' => 'btn-remove-page', 'icon' => 'dashicons dashicons-trash', 'class' => 'btn-danger', 'title' => __( 'Remove page', 'ngsurvey' ) )
+                    			    array( 'name' => 'btn-create-page', 'icon' => 'dashicons dashicons-plus', 'class' => 'btn-primary', 'text' => '', 'title' => __( 'Add page' , 'ngsurvey' ) ),
+                    			    array( 'name' => 'btn-edit-page-title', 'icon' => 'dashicons dashicons-edit', 'class' => 'btn-secondary', 'text' => '', 'title' => __( 'Edit title', 'ngsurvey' ) ),
+                    			    array( 'name' => 'btn-remove-page', 'icon' => 'dashicons dashicons-trash', 'class' => 'btn-danger', 'text' => '', 'title' => __( 'Remove page', 'ngsurvey' ) )
                     			);
                     			$buttons = apply_filters( 'ngsurvey_edit_questions_actions', $buttons );
                     			
@@ -79,7 +79,7 @@ ksort($groups);
                     			    <button type="button" 
                     			    	class="btn btn-sm <?php echo esc_attr( $button[ 'class' ] );?> me-1 <?php echo esc_attr( $button[ 'name' ] );?>" 
                     			    	title="<?php echo esc_attr( $button[ 'title' ] );?>">
-                    			    	<span class="<?php echo esc_attr( $button[ 'icon' ] );?>"></span>
+                    			    	<span class="<?php echo esc_attr( $button[ 'icon' ] );?>"></span> <?php echo esc_html( $button[ 'text' ] );?>
                     			    </button>
                     			    <?php
                     			}
