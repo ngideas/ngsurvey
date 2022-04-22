@@ -125,7 +125,8 @@ class NgSurvey_Model_Questions extends NgSurvey_Model {
         // Answers
         $query = "SELECT id, question_id, answer_type, title, sort_order, image " .
             "FROM {$wpdb->prefix}ngs_answers " .
-            "WHERE question_id IN (" . implode(', ', array_fill( 0, count( $question_ids ), '%d') ) . ")";
+            "WHERE question_id IN (" . implode(', ', array_fill( 0, count( $question_ids ), '%d') ) . ") " .
+        	"ORDER BY sort_order ASC";
         $answers = $wpdb->get_results( $wpdb->prepare( $query, ...$question_ids ) );
         
         if( empty( $answers ) ) {
