@@ -20,12 +20,12 @@
             'dev_requirement' => false,
         ),
         'matomo/device-detector' => array(
-            'pretty_version' => '5.0.5',
-            'version' => '5.0.5.0',
+            'pretty_version' => '6.0.0',
+            'version' => '6.0.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../matomo/device-detector',
             'aliases' => array(),
-            'reference' => 'cd1283126b4cf5081fdc0381b5b5e7849333cfa4',
+            'reference' => '7fc2af3af62bd69e6e3404d561e371a83c112be9',
             'dev_requirement' => false,
         ),
         'monolog/monolog' => array(
@@ -58,7 +58,7 @@
         'piwik/device-detector' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '5.0.5',
+                0 => '6.0.0',
             ),
         ),
         'psr/log' => array(
