@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 7.2
 Tested up to: 5.9
-Stable tag: 1.0.10
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,7 +121,17 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
-= 1.0.10: Jan 26, 2021 =
+= 1.1.0: Apr 23, 2022 =
+[New] ngsurvey_edit_questions_actions filter to customise action buttons on the questions edit page
+[New] Show tooltip for the action buttons on the edit questions page
+[New] Actions to perform tasks before and after showing questions form
+[New] Adding parameter to the new action hooks on questions form
+[Fix] Answers are not shown in the same order as they are saved
+[Fix] Fixed issue with question answers not shown in chosen order
+[Dep] Bump matomo/device-detector from 5.0.5 to 6.0.0
+[Dep]Bump monolog/monolog from 2.3.4 to 2.3.5
+
+= 1.0.10: Jan 26, 2022 =
 * [Chg] Wordpress v5.9 compatiability
 * [Dep] Minimum PHP version required is 7.2
 * [Dep] Bump matomo/device-detector from 4.3.1 to 5.0.3
