@@ -76,11 +76,12 @@ ksort($groups);
                     			
                     			foreach ( $buttons as $button ) {
                     			    ?>
-                    			    <button type="button" 
+                    			    <a href="<?php echo !empty( $button[ 'url' ] ) ? esc_url( $button[ 'url' ] ) : 'javascript: void(0)';?>"
                     			    	class="btn btn-sm <?php echo esc_attr( $button[ 'class' ] );?> me-1 <?php echo esc_attr( $button[ 'name' ] );?>" 
-                    			    	title="<?php echo esc_attr( $button[ 'title' ] );?>">
+                    			    	title="<?php echo esc_attr( $button[ 'title' ] );?>"
+                                        target="<?php echo isset( $button[ 'target' ] ) ? esc_attr( $button[ 'target' ] ) : '_self'; ?>">
                     			    	<span class="<?php echo esc_attr( $button[ 'icon' ] );?>"></span> <?php echo esc_html( $button[ 'text' ] );?>
-                    			    </button>
+                    			    </a>
                     			    <?php
                     			}
                     			?>
