@@ -112,6 +112,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	/**
 	 * @see __isset()
 	 */
+    #[\ReturnTypeWillChange]
 	public function offsetExists($offset)
 	{
 		return $this->__isset($offset);
@@ -120,6 +121,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	/**
 	 * @see __get()
 	 */
+    #[\ReturnTypeWillChange]
 	public function offsetGet($offset)
 	{
 		return $this->__get($offset);
@@ -128,6 +130,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	/**
 	 * @see __set()
 	 */
+    #[\ReturnTypeWillChange]
 	public function offsetSet($offset, $value)
 	{
 		$this->__set($offset, $value);
@@ -136,6 +139,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	/**
 	 * @see __unset()
 	 */
+    #[\ReturnTypeWillChange]
 	public function offsetUnset($offset)
 	{
 		$this->__unset($offset);
@@ -146,6 +150,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	 *
 	 * @return int number of properties.
 	 */
+    #[\ReturnTypeWillChange]
 	public function count()
 	{
 		return count($this->data);
@@ -194,16 +199,18 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	}
 
 	/** 
-	 * Magic method for iterator 
+	 * Magic method for iterator
 	 */
+    #[\ReturnTypeWillChange]
 	function rewind()
 	{
 		return reset($this->data);
 	}
 
-	/** 
+	/**
 	 * Magic method for iterator
 	 */
+    #[\ReturnTypeWillChange]
 	function current()
 	{
 		return current($this->data);
@@ -212,6 +219,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	/** 
 	 * Magic method for iterator 
 	 */
+    #[\ReturnTypeWillChange]
 	function key()
 	{
 		return key($this->data);
@@ -220,6 +228,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	/** 
 	 * Magic method for iterator
 	 */
+    #[\ReturnTypeWillChange]
 	function next()
 	{
 		return next($this->data);
@@ -228,6 +237,7 @@ class NgSurvey_Registry implements \ArrayAccess, \Countable, \Iterator {
 	/** 
 	 * Magic method for iterator 
 	 */
+    #[\ReturnTypeWillChange]
 	function valid()
 	{
 		return key($this->data) !== null;
