@@ -21,4 +21,6 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+/build.xml
+/.idea/
 /.idea/
