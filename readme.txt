@@ -7,7 +7,7 @@ Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 7.2
 Tested up to: 5.9
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,11 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.1.1: May 3, 2022 =
+* [New] Added support for filtering buttons on the form page
+* [Fix] Fixed the version info to show in bullets on wp.org
+* [Fix] Fixed issue with deprecation notices on PHP 8.1
+
 = 1.1.0: Apr 23, 2022 =
 * [New] ngsurvey_edit_questions_actions filter to customise action buttons on the questions edit page
 * [New] Show tooltip for the action buttons on the edit questions page
