@@ -6,8 +6,8 @@ Contributors: ngideas
 Tags: surveys, polls, forms, feedback form
 Requires at least: 4.9
 Requires PHP: 7.2
-Tested up to: 5.9
-Stable tag: 1.1.1
+Tested up to: 6.0
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,7 +49,7 @@ NgSurvey comes bundled with most useful question types.
  * Number type question
  * Email type question
 
-Many more question types available on our premium plugin "NgSurvey Extensions":
+Many more question types available on our premium plugin [NgSurvey Extensions](https://ngideas.com/ngsurvey-features/):
 
 * **Net Promoter Score** or NPS questions. Know what your customers/employees thinking about your products/services/company.
 * **Choice Grid** - Combine multiple similar questions with same set of answers into a grid type questions.
@@ -73,15 +73,16 @@ Many more question types available on our premium plugin "NgSurvey Extensions":
 * **Multiline Textarea** input. Get detailed answers with multiline textarea type questions.
 
 == Extensions ==
-Add more features with NgSurvey Extensions plugin.
+Add more features with [NgSurvey Extensions](https://ngideas.com/ngsurvey-features/) plugin.
 
-* Campaigns - Build your audience and invite them to take your surveys. Create and send HTML email invitations with built-in visual email builder.
-* CSV Downloads - Download all your responses data in a CSV file and analyze it on Excel or third party software.
-* Emails - Send automated surveys when your users purchase a product, respond to a survey and so on.
-* Front-end management - Monetise surveys as a software-as-service business. Let your front-end users create and manage surveys on their own.
-* MaxMind GeoIP Location - Capture your respondent location data such as country name, state/region name and city name.
-* reCAPTCHA - Protect your responses from spammers by enabling reCAPTCHA validations to your guest responses.
-* Import & Export - Export your survey to a JSON file and import to another site or use it to duplicate the surveys with one click importer.
+* **Google Sheets** - One click integration with Google Sheets enables live sync survey responses to Google Sheets document.
+* **Campaigns** - Build your audience and invite them to take your surveys. Create and send HTML email invitations with built-in visual email builder.
+* **CSV Downloads** - Download all your responses data in a CSV file and analyze it on Excel or third party software.
+* **Emails** - Send automated surveys when your users purchase a product, respond to a survey and so on.
+* **Front-end management** - Monetise surveys as a software-as-service business. Let your front-end users create and manage surveys on their own.
+* **MaxMind GeoIP Location** - Capture your respondent location data such as country name, state/region name and city name.
+* **reCAPTCHA** - Protect your responses from spammers by enabling reCAPTCHA validations to your guest responses.
+* **Import & Export** - Export your survey to a JSON file and import to another site or use it to duplicate the surveys with one click importer.
 
 == Feature Tour ==
 Learn more about NgSurvey and read detailed information on NgSurvey features on the [feature tour page](https://ngideas.com/ngsurvey-features/)
@@ -121,6 +122,11 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.1.2: May 17, 2022 =
+* [New] WordPress 6.0 compatibility
+* [Dep] Update composer dependencies
+* [Dep] Bump up Bootstrap version to 5.1.3
+
 = 1.1.1: May 3, 2022 =
 * [New] Added support for filtering buttons on the form page
 * [Fix] Fixed the version info to show in bullets on wp.org
