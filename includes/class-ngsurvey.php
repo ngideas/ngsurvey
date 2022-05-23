@@ -161,7 +161,7 @@ class NgSurvey {
 		$this->loader->add_action( 'add_meta_boxes', $plugin_metabox, 'register_survey_options' );
 		$this->loader->add_action( 'save_post', $plugin_metabox, 'save_survey_options' );
 		$this->loader->add_action( 'save_post', $plugin_metabox, 'save_revisions' );
-		$this->loader->add_action( 'wp_restore_post_revision', $plugin_metabox, 'restore_revisions' );
+		$this->loader->add_action( 'wp_restore_post_revision', $plugin_metabox, 'restore_revisions', 10, 2 );
 		$this->loader->add_filter( '_wp_post_revision_fields', $plugin_metabox, 'get_revisions_fields', 10, 2 );
 		$this->loader->add_filter( '_wp_post_revision_field_my_meta', $plugin_metabox, 'display_revisions_fields', 10, 2 );
 
