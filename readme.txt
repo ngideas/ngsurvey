@@ -122,8 +122,9 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
-= 1.1.2: May 17, 2022 =
+= 1.1.2: May 23, 2022 =
 * [New] WordPress 6.0 compatibility
+* [Fix] Fix for PHP Uncaught ArgumentCountError on restore_revisions hook
 * [Dep] Update composer dependencies
 * [Dep] Bump up Bootstrap version to 5.1.3
 
