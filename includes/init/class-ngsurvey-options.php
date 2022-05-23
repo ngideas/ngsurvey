@@ -98,6 +98,8 @@ class NgSurvey_Options {
 
 	/**
 	 * Adds survey options metabox to edit screen
+	 *
+	 * @since 1.0.0
 	 */
 	function register_survey_options() {
 	    
@@ -118,6 +120,8 @@ class NgSurvey_Options {
 	 * Create the metabox default values
 	 * This allows us to save multiple values in an array, reducing the size of our database.
 	 * Setting defaults helps avoid "array key doesn't exit" issues.
+	 *
+	 * @since 1.0.0
 	 */
 	function ngs_metabox_defaults() {
 	    $defaults = array(
@@ -137,6 +141,8 @@ class NgSurvey_Options {
 	/**
 	 * Render the metabox markup
 	 * This is the function called in `register_survey_meta_box()`
+	 *
+	 * @since 1.0.0
 	 */
 	public function render_metabox( $post = 0 ) {
 	    $saved = get_post_meta( is_a( $post, 'WP_Post' ) ? $post->ID : $post, 'ngsurvey_settings', true ); // Get the saved values
@@ -163,6 +169,8 @@ class NgSurvey_Options {
 	 * @param int     $post_id Post ID.
 	 * @param WP_Post $post    Post object.
 	 * @return null
+	 *
+	 * @since 1.0.0
 	 */
 	public function save_survey_options( $post_id ) {
 	    
@@ -210,6 +218,8 @@ class NgSurvey_Options {
 	/**
 	 * Save events data to revisions
 	 * @param  Number $post_id The post ID
+	 *
+	 * @since 1.0.0
 	 */
 	public function save_revisions( $post_id ) {
 	    
@@ -244,9 +254,15 @@ class NgSurvey_Options {
 	 * Restore events data with post revisions
 	 * @param  Number $post_id     The post ID
 	 * @param  Number $revision_id The revision ID
+	 *
+	 * @since 1.0.0
 	 */
-	public function restore_revisions( $post_id, $revision_id ) {
-	    
+	public function restore_revisions( $post_id, $revision_id = 0 ) {
+		// Fix for unknown cases where the revision is not sent
+	    if( !$revision_id ) {
+			return;
+	    }
+
 	    // Variables
 	    $revision = get_post( $revision_id ); // The revision
 	    $defaults = $this->ngs_metabox_defaults(); // The default values
@@ -272,6 +288,8 @@ class NgSurvey_Options {
 	 * Get the data to display on the revisions page
 	 * @param  Array $fields The fields
 	 * @return Array The fields
+	 *
+	 * @since 1.0.0
 	 */
 	public function get_revisions_fields( $fields ) {
 	    
@@ -290,6 +308,8 @@ class NgSurvey_Options {
 	 * Display the data on the revisions page
 	 * @param  String|Array $value The field value
 	 * @param  Array        $field The field
+	 *
+	 * @since 1.0.0
 	 */
 	public function _display_revisions_fields( $value, $field ) {
 	    global $revision;
