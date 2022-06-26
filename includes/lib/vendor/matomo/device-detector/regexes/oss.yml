@@ -193,6 +193,20 @@
   version: ''
 
 ##########
+# Revenge OS
+##########
+- regex: 'revengeos_x2'
+  name: 'Revenge OS'
+  version: '2'
+
+##########
+# Lineage OS
+##########
+- regex: 'lineage_\w+'
+  name: 'Lineage OS'
+  version: ''
+
+##########
 # Remix OS
 ##########
 - regex: 'RemixOS|Remix (?:Pro|Mini)'
@@ -222,6 +236,49 @@
 - regex: 'Android[; ](\d+[\.\d]*).+Android TV'
   name: 'Android TV'
   version: '$1'
+
+##########
+# Android SDK Level Api
+##########
+- regex: '\d+/tclwebkit(?:\d+[\.\d]*)'
+  name: 'Android'
+  versions:
+    - regex: '33/tclwebkit'
+      version: '13'
+    - regex: '3[12]/tclwebkit'
+      version: '12'
+    - regex: '30/tclwebkit'
+      version: '11'
+    - regex: '29/tclwebkit'
+      version: '10'
+    - regex: '28/tclwebkit'
+      version: '9'
+    - regex: '27/tclwebkit'
+      version: '8.1'
+    - regex: '26/tclwebkit'
+      version: '8'
+    - regex: '25/tclwebkit'
+      version: '7.1'
+    - regex: '24/tclwebkit'
+      version: '7'
+    - regex: '23/tclwebkit'
+      version: '6'
+    - regex: '22/tclwebkit'
+      version: '5.1'
+    - regex: '21/tclwebkit'
+      version: '5'
+    - regex: '(?:20|19)/tclwebkit'
+      version: '4.4'
+    - regex: '18/tclwebkit'
+      version: '4.3'
+    - regex: '17/tclwebkit'
+      version: '4.2'
+    - regex: '16/tclwebkit'
+      version: '4.2'
+    - regex: '15/tclwebkit'
+      version: '4.0.3'
+    - regex: '15/tclwebkit'
+      version: '4.0.1'
 
 ##########
 # Android
@@ -522,7 +579,7 @@
   name: 'Windows'
   version: ''
 
-- regex: '(?:Windows(?:-Update-Agent)?|Microsoft-(?:CryptoAPI|Delivery-Optimization|WebDAV-MiniRedir|WNS))/(\d+\.\d+)'
+- regex: '(?:Windows(?:-Update-Agent)?|Microsoft-(?:CryptoAPI|Delivery-Optimization|WebDAV-MiniRedir|WNS)|WINDOWS_64)/(\d+\.\d+)'
   name: 'Windows'
   version: '$1'
 
@@ -660,6 +717,8 @@
 - regex: '^(?!com.apple.Safari.SearchHelper).*CFNetwork/.+ Darwin/(\d+[\.\d]+)(?!.*(?:x86_64|i386|PowerMac|Power%20Macintosh))'
   name: 'iOS'
   versions:
+    - regex: 'Darwin/21.5.0'
+      version: '15.5'
     - regex: 'Darwin/21.4.0'
       version: '15.4'
     - regex: 'Darwin/21.3.0'

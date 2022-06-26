@@ -5,6 +5,13 @@
 # @license http://www.gnu.org/licenses/lgpl.html LGPL v3 or later
 ###############
 
+# Tesla Browser (https://www.teslabrowser.com/)
+- regex: 'Chrome/(\d+\.[\.\d]+).+TeslaBrowser/'
+  name: 'Tesla Browser'
+  version: '$1'
+  engine:
+    default: 'Blink'
+
 # Viasat Browser (https://browser.viasat.com/)
 - regex: 'Chrome/(\d+\.[\.\d]+).+Sparrow'
   name: 'Viasat Browser'
@@ -80,6 +87,11 @@
   engine:
     default: 'Blink'
 
+# BrowseHere
+- regex: '\d+/tclwebkit(?:\d+[\.\d]*)'
+  name: 'BrowseHere'
+  version: ""
+
 # Hi Browser (https://play.google.com/store/apps/details?id=com.talpa.hibrowser)
 - regex: 'HiBrowser/(\d+[\.\d]+)'
   name: 'Hi Browser'
@@ -110,6 +122,13 @@
 # T+Browser (https://t.chanjet.com/tplus/view/login/downloadBrowser.html | https://dad.chanapp.chanjet.com/tplusapp/TPlusBrowser.exe)
 - regex: 'T\+Browser/(\d+[\.\d]+)'
   name: 'T+Browser'
+  version: '$1'
+  engine:
+    default: 'Blink'
+
+# SP Browser (https://play.google.com/store/apps/details?id=privatebrowser.securebrowser.com.klar)
+- regex: 'Private Browser/(\d+[\.\d]+) Chrome/'
+  name: 'Secure Private Browser'
   version: '$1'
   engine:
     default: 'Blink'
@@ -321,6 +340,13 @@
 - regex: 'Lolifox/(\d+[\.\d]+)'
   name: 'Lolifox'
   version: '$1'
+
+# PiBrowser (https://play.google.com/store/apps/details?id=pi.browser)
+- regex: 'PiBrowser/(\d+[\.\d]+)'
+  name: 'Pi Browser'
+  version: '$1'
+  engine:
+    default: 'Blink'
 
 # Qutebrowser (https://qutebrowser.org/)
 - regex: 'qutebrowser/(\d+[\.\d]+).+Chrome'
@@ -1000,6 +1026,13 @@
   engine:
     default: 'Gecko'
 
+# AOL Shield Pro
+- regex: 'Chrome/.+ AOLShield(?:/(\d+[\.\d]+))?'
+  name: 'AOL Shield Pro'
+  version: '$1'
+  engine:
+    default: 'Blink'
+
 # AOL Shield
 - regex: 'AOLShield(?:/(\d+[\.\d]+))?'
   name: 'AOL Shield'
@@ -1195,7 +1228,6 @@
   version: ''
   engine:
     default: 'WebKit'
-
 
 #Pale Moon
 - regex: '.*Goanna.*PaleMoon(?:/(\d+[\.\d]+))?'
@@ -1457,6 +1489,11 @@
 - regex: 'OP(?:RG)?X(?:/(\d+[\.\d]+))?'
   name: 'Opera GX'
   version: '$1'
+  engine:
+    default: 'WebKit'
+- regex: 'Opera%20GX/.+CFNetwork/.+Darwin/'
+  name: 'Opera GX'
+  version: ''
   engine:
     default: 'WebKit'
 

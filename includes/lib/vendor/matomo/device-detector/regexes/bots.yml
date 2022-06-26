@@ -363,7 +363,7 @@
     name: 'Certified Security Solutions'
     url: 'https://www.css-security.com/company/about-us/'
 
-- regex: 'Datadog Agent'
+- regex: 'Datadog Agent|Datadog/?Synthetics'
   name: 'Datadog Agent'
   url: 'https://github.com/DataDog/dd-agent'
   category: 'Site Monitor'
@@ -837,6 +837,14 @@
   producer:
     name: ''
     url: ''
+
+- regex: 'masscan-ng/([\d+.]+)'
+  name: 'masscan-ng'
+  url: 'https://github.com/bi-zone/masscan-ng'
+  category: 'Crawler'
+  producer:
+    name: 'BIZON, OOO'
+    url: 'https://bi.zone/'
 
 - regex: 'masscan'
   name: 'masscan'
@@ -1942,7 +1950,7 @@
 - regex: 'RSSRadio \(Push Notification Scanner;support@dorada\.co\.uk\)'
   name: 'RSSRadio Bot'
 
-- regex: '(A6-Indexer|nuhk|TsolCrawler|Yammybot|Openbot|Gulper Web Bot|grub-client|Download Demon|SearchExpress|Microsoft URL Control|borg|altavista|dataminr.com|tweetedtimes.com|TrendsmapResolver|teoma|blitzbot|oegp|furlbot|http%20client|polybot|htdig|mogimogi|larbin|scrubby|searchsight|seekbot|semanticdiscovery|snappy|vortex(?!(?: Build|Plus))|zeal|fast-webcrawler|converacrawler|dataparksearch|findlinks|BrowserMob|HttpMonitor|ThumbShotsBot|URL2PNG|ZooShot|GomezA|Google SketchUp|Read%20Later|RackspaceBot|robots|SeopultContentAnalyzer|7Siters|centuryb.o.t9|InterNaetBoten|EasyBib AutoCite|Bidtellect|tomnomnom/meg|My User Agent|cortex|CF-UC User Agent|Re-re Studio|adreview|AHC/|NameOfAgent|Request-Promise|ALittle Client|Hello, world|wp_is_mobile)'
+- regex: '(A6-Indexer|nuhk|TsolCrawler|Yammybot|Openbot|Gulper Web Bot|grub-client|Download Demon|SearchExpress|Microsoft URL Control|borg|altavista|dataminr.com|tweetedtimes.com|TrendsmapResolver|teoma|blitzbot|oegp|furlbot|http%20client|polybot|htdig|mogimogi|larbin|scrubby|searchsight|seekbot|semanticdiscovery|snappy|vortex(?!(?: Build|Plus))|zeal|fast-webcrawler|converacrawler|dataparksearch|findlinks|BrowserMob|HttpMonitor|ThumbShotsBot|URL2PNG|ZooShot|GomezA|Google SketchUp|Read%20Later|RackspaceBot|robots|SeopultContentAnalyzer|7Siters|centuryb.o.t9|InterNaetBoten|EasyBib AutoCite|Bidtellect|tomnomnom/meg|My User Agent|cortex|CF-UC User Agent|Re-re Studio|adreview|AHC/|NameOfAgent|Request-Promise|ALittle Client|Hello, world|wp_is_mobile|0xAbyssalDoesntExist)'
   name: 'Generic Bot'
 
 - regex: '^sentry'
@@ -2749,6 +2757,77 @@
   producer:
     name: 'WebPros Holdco B.V.'
     url: 'https://webpros.com/'
+
+- regex: 'ELB-HealthChecker'
+  name: 'Amazon ELB'
+  category: 'Site Monitor'
+  url: 'https://aws.amazon.com/elasticloadbalancing/'
+  producer:
+    name: 'Amazon.com, Inc.'
+    url: 'https://www.amazon.com/'
+
+- regex: 'Wheregoes.com Redirect Checker/([\d+.]+)'
+  name: 'WhereGoes'
+  category: 'Crawler'
+  url: 'https://wheregoes.com/'
+
+- regex: 'project_patchwatch'
+  name: 'Project Patchwatch'
+  category: 'Crawler'
+  url: 'http://66.240.192.82/'
+
+- regex: 'InternetMeasurement/([\d+.]+)'
+  name: 'InternetMeasurement'
+  category: 'Crawler'
+  url: 'https://internet-measurement.com/'
+
+- regex: 'DomainAppender /([\d+.]+)'
+  name: 'DomainAppender'
+  category: 'Crawler'
+  url: 'https://www.profound.net/product/domain_append/'
+  producer:
+    name: 'Profound Networks, LLC'
+    url: 'https://www.profound.net/'
+
+- regex: 'FreeWebMonitoring SiteChecker/([\d+.]+)'
+  name: 'FreeWebMonitoring'
+  category: 'Site Monitor'
+  url: 'https://www.freewebmonitoring.com/bot.html'
+  producer:
+    name: 'GreenWave Online, Inc.'
+    url: 'http://www.greenwaveonline.com/'
+
+- regex: 'Page Modified Pinger'
+  name: 'Page Modified Pinger'
+  category: 'Site Monitor'
+  url: 'https://www.pagemodified.com/'
+  producer:
+    name: 'Valley Hosting, LLC'
+    url: 'https://www.pagemodified.com/'
+
+- regex: 'adstxtlab.com'
+  name: 'adstxtlab.com'
+  category: 'Crawler'
+  url: 'https://adstxtlab.com/validator.php'
+  producer:
+    name: 'Jaohawi AB'
+    url: 'https://adstxtlab.com/'
+
+- regex: 'Iframely/([\d+.]+)'
+  name: 'Iframely'
+  category: 'Crawler'
+  url: 'https://iframely.com/'
+  producer:
+    name: 'Itteco Software, Corp.'
+    url: 'https://iframely.com/'
+
+- regex: 'DomainStatsBot/([\d+.]+)'
+  name: 'DomainStatsBot'
+  category: 'Crawler'
+  url: 'https://domainstats.com/pages/our-bot'
+  producer:
+    name: 'Domainstats Ltd'
+    url: 'https://domainstats.com/'
 
 # Generic detections
 - regex: '[a-z0-9\-_]*((?<!cu|power[ _]|m[ _])bot(?![ _]TAB|[ _]?5[0-9]|[ _]Senior|[ _]Junior)|crawler|crawl|checker|archiver|transcoder|spider)([^a-z]|$)'
