@@ -33,6 +33,7 @@ foreach ( $question->answers as &$answer ) {
     $chartData[] = array( 'label' => $answer->title, 'value' => $answer->votes );
     $totalResponses = $totalResponses + $answer->votes;
 }
+unset($answer);
 ?>
 <div class="mb-4">
 	<table class="table table-bordered">
