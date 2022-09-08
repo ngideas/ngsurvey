@@ -3,11 +3,11 @@ Author URI: https://ngideas.com
 Plugin URI: https://ngideas.com
 Donate link: https://ngideas.com/donate/
 Contributors: ngideas
-Tags: surveys, polls, forms, feedback form
+Tags: surveys, survey, polls, forms, feedback forms
 Requires at least: 4.9
 Requires PHP: 7.2
 Tested up to: 6.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,6 +122,12 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.1.3: Sep 08, 2022 =
+* [Fix] Remove text decorations of hyperlinks for clean look
+* [Fix] Choice question last answer is repeated on the consolidated report
+* [Dep] Upgrading Bootstrap version to v5.2.1
+* [Dep] Update dependencies to latest versions
+
 = 1.1.2: May 23, 2022 =
 * [New] WordPress 6.0 compatibility
 * [Fix] Fix for PHP Uncaught ArgumentCountError on restore_revisions hook
