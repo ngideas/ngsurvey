@@ -1,6 +1,7 @@
 /**
  * NgSurvey styles
  */
+#ngs a {text-decoration: none}
 #ngs {line-height: 1.15; font-size: 16px;}
 #ngs .card {max-width: 100%; padding: 0; margin: 0;}
 #ngs #questions-form .card-header, #ngs #survey-reports .card-header {padding: 0; margin: 0;}

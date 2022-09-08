@@ -1,6 +1,8 @@
 /*!
  * NGSurvey CSS
  */
+#ngs a {text-decoration: none}
+
 #ngs .error {color: #dc3545!important;}
 #ngs .dashicons {vertical-align: text-bottom;}
 #ngs .survey-form .input-group .form-control {margin-bottom: 0 !important;}
