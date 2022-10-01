@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "matomo/device-detector",
-            "version": "6.0.1",
-            "version_normalized": "6.0.1.0",
+            "version": "6.0.3",
+            "version_normalized": "6.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/device-detector.git",
-                "reference": "a745aed40656e54d877f4b89754107a0b12a2a9d"
+                "reference": "6ba69e1afd24b45d66b6de7b04553213f7ef2151"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/a745aed40656e54d877f4b89754107a0b12a2a9d",
-                "reference": "a745aed40656e54d877f4b89754107a0b12a2a9d",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/6ba69e1afd24b45d66b6de7b04553213f7ef2151",
+                "reference": "6ba69e1afd24b45d66b6de7b04553213f7ef2151",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
                 "doctrine/cache": "Can directly be used for caching purpose",
                 "ext-yaml": "Necessary for using the Pecl YAML parser"
             },
-            "time": "2022-06-10T08:32:53+00:00",
+            "time": "2022-09-12T11:43:29+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -74,17 +74,17 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.7.0",
-            "version_normalized": "2.7.0.0",
+            "version": "2.8.0",
+            "version_normalized": "2.8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524"
+                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5579edf28aee1190a798bfa5be8bc16c563bd524",
-                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/720488632c590286b88b80e62aa3d3d551ad4a50",
+                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50",
                 "shasum": ""
             },
             "require": {
@@ -104,11 +104,10 @@
                 "guzzlehttp/psr7": "^2.2",
                 "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4 || ^3",
-                "php-console/php-console": "^3.1.3",
                 "phpspec/prophecy": "^1.15",
                 "phpstan/phpstan": "^0.12.91",
                 "phpunit/phpunit": "^8.5.14",
-                "predis/predis": "^1.1",
+                "predis/predis": "^1.1 || ^2.0",
                 "rollbar/rollbar": "^1.3 || ^2 || ^3",
                 "ruflin/elastica": "^7",
                 "swiftmailer/swiftmailer": "^5.3|^6.0",
@@ -128,11 +127,10 @@
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
-            "time": "2022-06-09T08:59:12+00:00",
+            "time": "2022-07-24T11:55:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -165,7 +163,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.7.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.8.0"
             },
             "funding": [
                 {
@@ -424,24 +422,24 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.4.37",
-            "version_normalized": "4.4.37.0",
+            "version": "v4.4.44",
+            "version_normalized": "4.4.44.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "0628e6c6d7c92f1a7bae543959bdc17347be2436"
+                "reference": "bd0a6737e48de45b4b0b7b6fc98c78404ddceaed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/0628e6c6d7c92f1a7bae543959bdc17347be2436",
-                "reference": "0628e6c6d7c92f1a7bae543959bdc17347be2436",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/bd0a6737e48de45b4b0b7b6fc98c78404ddceaed",
+                "reference": "bd0a6737e48de45b4b0b7b6fc98c78404ddceaed",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3",
                 "symfony/polyfill-php80": "^1.16"
             },
-            "time": "2022-01-02T09:41:36+00:00",
+            "time": "2022-06-27T13:16:42+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -473,7 +471,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v4.4.37"
+                "source": "https://github.com/symfony/css-selector/tree/v4.4.44"
             },
             "funding": [
                 {
@@ -579,17 +577,17 @@
         },
         {
             "name": "woocommerce/action-scheduler",
-            "version": "3.4.2",
-            "version_normalized": "3.4.2.0",
+            "version": "3.5.2",
+            "version_normalized": "3.5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/woocommerce/action-scheduler.git",
-                "reference": "7d8e830b6387410ccf11708194d3836f01cb2942"
+                "reference": "519cfa20db89eb85511cad08301d3fa33522ed8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/woocommerce/action-scheduler/zipball/7d8e830b6387410ccf11708194d3836f01cb2942",
-                "reference": "7d8e830b6387410ccf11708194d3836f01cb2942",
+                "url": "https://api.github.com/repos/woocommerce/action-scheduler/zipball/519cfa20db89eb85511cad08301d3fa33522ed8b",
+                "reference": "519cfa20db89eb85511cad08301d3fa33522ed8b",
                 "shasum": ""
             },
             "require-dev": {
@@ -598,7 +596,7 @@
                 "wp-cli/wp-cli": "~2.5.0",
                 "yoast/phpunit-polyfills": "^1.0"
             },
-            "time": "2022-06-08T15:46:07+00:00",
+            "time": "2022-09-16T15:31:00+00:00",
             "type": "wordpress-plugin",
             "extra": {
                 "scripts-description": {
@@ -616,7 +614,7 @@
             "homepage": "https://actionscheduler.org/",
             "support": {
                 "issues": "https://github.com/woocommerce/action-scheduler/issues",
-                "source": "https://github.com/woocommerce/action-scheduler/tree/3.4.2"
+                "source": "https://github.com/woocommerce/action-scheduler/tree/3.5.2"
             },
             "install-path": "../woocommerce/action-scheduler"
         }
