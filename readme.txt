@@ -6,8 +6,8 @@ Contributors: ngideas
 Tags: surveys, survey, polls, forms, feedback forms
 Requires at least: 4.9
 Requires PHP: 7.2
-Tested up to: 6.0
-Stable tag: 1.1.3
+Tested up to: 6.1
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,6 +122,12 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.1.4: Nov 04, 2022 =
+* [New] WordPress 6.1 compatibility
+* [Dep] Bump matomo/device-detector from 6.0.2 to 6.0.3
+* [Dep] Bump woocommerce/action-scheduler from 3.5.0 to 3.5.2
+* [Dep] Updated dependencies with latest versions
+
 = 1.1.3: Sep 08, 2022 =
 * [Fix] Remove text decorations of hyperlinks for clean look
 * [Fix] Choice question last answer is repeated on the consolidated report
