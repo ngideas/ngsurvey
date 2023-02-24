@@ -1,9 +1,9 @@
 {
 	"require" : {
-		"matomo/device-detector" : "~6.0",
+		"matomo/device-detector" : "~6.1",
 		"pelago/emogrifier" : "~6.0",
-		"woocommerce/action-scheduler" : "~3.2",
-		"monolog/monolog" : "~2.2"
+		"woocommerce/action-scheduler" : "~3.5.4",
+		"monolog/monolog" : "~2.9"
 	},
 	"config" : {
 		"platform" : {
