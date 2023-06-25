@@ -122,6 +122,10 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.1.7: Jun 25, 2023 =
+* [Dep] Bump up Bootstrap version to v5.3.0
+* [Dep] Bump up dependencies to latest versions
+
 = 1.1.6: Mar 30, 2023 =
 * [New] WordPress 6.2 compatibility
 * [Dep] Bump matomo/device-detector from 6.0.4 to 6.1.0
@@ -130,7 +134,7 @@ Please post your query on the plugin support page. You are welcome to contribute
 
 = 1.1.5: Dec 06, 2022 =
 * [Dep] Bump woocommerce/action-scheduler from 3.5.2 to 3.5.3
-* [Fix] Fix CWE-912 by downgrading SweetAlert2 library https://github.com/sweetalert2/sweetalert2/pull/2428
+* [Fix] Fix CWE-912 by downgrading SweetAlert2 library
 
 = 1.1.4: Nov 04, 2022 =
 * [New] WordPress 6.1 compatibility
