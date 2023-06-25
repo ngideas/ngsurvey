@@ -122,6 +122,9 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.1.8: Jun 25, 2023 =
+* [Fix] Fix version information on WordPress
+
 = 1.1.7: Jun 25, 2023 =
 * [Dep] Bump up Bootstrap version to v5.3.0
 * [Dep] Bump up dependencies to latest versions
