@@ -7,7 +7,7 @@ Tags: surveys, survey, polls, forms, feedback forms
 Requires at least: 4.9
 Requires PHP: 7.2
 Tested up to: 6.2
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,6 +122,9 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.1.9: Jul 26, 2023 =
+[fix] Fixed issue with form elements border colors
+
 = 1.1.8: Jun 25, 2023 =
 * [Fix] Fix version information on WordPress
 
