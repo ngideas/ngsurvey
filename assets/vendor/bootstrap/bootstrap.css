@@ -4,7 +4,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-#ngs {
+{
   /* rtl:raw:
   [type="tel"],
   [type="url"],
@@ -32,8 +32,8 @@
   /* rtl:begin:remove */
   /* rtl:end:remove */
 }
-#ngs :root,
-#ngs [data-bs-theme=light] {
+:root,
+[data-bs-theme=light] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -151,7 +151,7 @@
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
 }
-#ngs [data-bs-theme=dark] {
+[data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #adb5bd;
   --bs-body-color-rgb: 173, 181, 189;
@@ -210,7 +210,7 @@
   box-sizing: border-box;
 }
 @media (prefers-reduced-motion: no-preference) {
-  #ngs :root {
+  :root {
     scroll-behavior: smooth;
   }
 }
