@@ -7,8 +7,8 @@
 #ngs .dashicons {vertical-align: text-bottom;}
 #ngs .survey-form .input-group .form-control {margin-bottom: 0 !important;}
 
-#ngs .questions .question {margin-bottom: 3rem;}
-#ngs .questions .question .question-title {font-size: 1.25rem; font-weight: 400;}
+#ngs .questions .question {margin-bottom: 3em;}
+#ngs .questions .question .question-title {font-size: 1.25em; font-weight: 400;}
 #ngs .sortable a {text-decoration: none;}
 #ngs .ng-rating-grid .align-center {text-align: center !important;}
 #ngs .ng-rating-grid, #ngs .ng-rating-grid th, #ngs .ng-rating-grid td {border: 0;}
