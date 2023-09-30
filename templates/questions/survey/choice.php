@@ -26,7 +26,7 @@ switch ( $question->params->get('choice_type') ) {
     case 'radio':
         foreach ( $question->answers as $answer ) {
             ?>
-            <div class="mb-1 form-check custom-radio<?php echo $question->params->get('show_answers_inline') ? ' custom-control-inline' : '';?>">
+            <div class="mb-1 form-check <?php echo $question->params->get('show_answers_inline') ? ' form-check-inline' : '';?>">
             	<input 
             		type="radio" 
             		id="answer-<?php echo $question->id;?>-<?php echo (int) $answer->id;?>" 
@@ -47,7 +47,7 @@ switch ( $question->params->get('choice_type') ) {
     case 'checkbox':
         foreach ( $question->answers as $answer ) {
             ?>
-            <div class="mb-1 form-check custom-checkbox<?php echo $question->params->get('show_answers_inline') ? ' custom-control-inline' : '';?>">
+            <div class="mb-1 form-check <?php echo $question->params->get('show_answers_inline') ? ' form-check-inline' : '';?>">
             	<input 
             		type="checkbox" 
             		id="answer-<?php echo (int) $question->id;?>-<?php echo (int) $answer->id;?>" 

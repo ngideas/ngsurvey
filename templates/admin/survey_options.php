@@ -29,7 +29,7 @@ $params     = $data->params;
 		        
 		        foreach ( $option->options as $value => $label ) {
 		            ?>
-    		        <div class="form-check custom-<?php echo esc_attr( $option->type );?> custom-control-inline">
+    		        <div class="form-check custom-<?php echo esc_attr( $option->type );?> form-check-inline">
     		        	<input type="<?php echo esc_attr( $option->type );?>" 
     		        		id="<?php echo esc_attr( $option->name . $value );?>" 
     		        		name="ngsurvey_settings[<?php echo esc_attr( $option->name );?>][]"
