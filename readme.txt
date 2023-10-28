@@ -6,8 +6,8 @@ Contributors: ngideas
 Tags: surveys, survey, polls, forms, feedback forms
 Requires at least: 4.9
 Requires PHP: 7.2
-Tested up to: 6.2
-Stable tag: 1.1.9
+Tested up to: 6.4
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,7 @@ Report bugs and contribute to the project on our GitHub repository at [https://g
 
 = Quick overview =
 * Create the questionnaire with the Ajax powered modern form builder. Quickly view and change entire questionnaire at a time. Questions are fully customized with options to provide CSS class names.
+* Bulk import pre-defined answers using Answer Presets.
 * Allows you to organize your questionnaire into multiple pages. Create a one page small survey to multipage large surveys with less effort.
 * Show personalized questions to the users with built-in skip/conditional logic. Set up conditional rules on all your questions with an advanced rules builder.
 * Not just creating the surveys, responding to the surveys is also made simple with Ajax powered response forms. 
@@ -122,8 +123,16 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.2.0: Oct 28, 2023 =
+* [Feature] Create answer presets and use them to quickly add bulk answers
+* [Feature] Enter bulk answers in the question form
+* [Fix] Modal dialog box backdrop is not showing
+* [Fix] Question titles font is too small on few templates
+* [Fix] Choice question options are not shown inline
+* [Dep] Update dependencies
+
 = 1.1.9: Jul 26, 2023 =
-[fix] Fixed issue with form elements border colors
+* [Fix] Fixed issue with form elements border colors
 
 = 1.1.8: Jun 25, 2023 =
 * [Fix] Fix version information on WordPress
