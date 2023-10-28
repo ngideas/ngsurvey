@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 		case 'reports': NgSurveyApi.Reports.init(); break;
 		case 'extensions': NgSurveyApi.Extensions.init(); break;
 		case 'settings': NgSurveyApi.Settings.init(); break;
+		case 'metabox': NgSurveyApi.Metabox.init(); break;
 		default: 
 			if(NgSurveyApi.hasOwnProperty(module)) {
 				var context = NgSurveyApi[module];

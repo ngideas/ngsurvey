@@ -140,6 +140,14 @@ if ( ! defined( 'NGSURVEY_CPT_NAME') ) {
 }
 
 /**
+ * NGPRESET_CPT_NAME constant.
+ * It defines name of the custom post type of presets
+ */
+if ( ! defined( 'NGPRESET_CPT_NAME') ) {
+	define( 'NGPRESET_CPT_NAME', 'ngpreset' );
+}
+
+/**
  * NGSURVEY_OPTIONS constant.
  * It defines name using which all plugin options are saved
  */

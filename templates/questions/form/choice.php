@@ -48,8 +48,12 @@ $question   = $data;
     	?>
     </div>
     
-    <button type="button" class="btn btn-primary btn-add-answer">
+    <button type="button" class="btn btn-outline-primary btn-add-answer">
     	<span class="dashicons dashicons-plus"></span> <?php echo esc_html__( 'Add an answer', 'ngsurvey' );?>
+    </button>
+
+    <button type="button" class="btn btn-outline-secondary btn-load-answer-presets" data-preset-type="answer" data-bs-toggle="modal" data-bs-target="#answer-presets-modal">
+        <span class="dashicons dashicons-layout"></span> <?php echo esc_html__( 'Import Answers', 'ngsurvey' );?>
     </button>
     
     <div class="answer-template" style="display: none;">

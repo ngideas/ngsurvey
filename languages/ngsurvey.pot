@@ -1,5 +1,5 @@
 # NgSurvey Translation Template File.
-# Copyright (C) 2021 BulaSikku Technologies Private Limited
+# Copyright (C) 2023 BulaSikku Technologies Private Limited
 # This file is distributed under the same license as the NgSurvey package.
 # NgIdeas <support@ngideas.com>, 2021.
 #
