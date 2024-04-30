@@ -6,8 +6,8 @@ Contributors: ngideas
 Tags: surveys, survey, polls, forms, feedback forms
 Requires at least: 4.9
 Requires PHP: 7.2
-Tested up to: 6.4
-Stable tag: 1.2.0
+Tested up to: 6.5
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -123,6 +123,9 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+= 1.2.1: Apr 30, 2024 =
+* [Feature] WP 6.5 compatibility
+
 = 1.2.0: Oct 28, 2023 =
 * [Feature] Create answer presets and use them to quickly add bulk answers
 * [Feature] Enter bulk answers in the question form
