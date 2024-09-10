@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "matomo/device-detector",
-            "version": "6.3.2",
+            "version": "6.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/device-detector.git",
-                "reference": "9208a482981be18aaa23701c91f2ef373b567790"
+                "reference": "05dca429cfe7b6a59947a0d449dbeb60cddc02f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/9208a482981be18aaa23701c91f2ef373b567790",
-                "reference": "9208a482981be18aaa23701c91f2ef373b567790",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/05dca429cfe7b6a59947a0d449dbeb60cddc02f2",
+                "reference": "05dca429cfe7b6a59947a0d449dbeb60cddc02f2",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
                 "source": "https://github.com/matomo-org/matomo",
                 "wiki": "https://dev.matomo.org/"
             },
-            "time": "2024-05-27T17:04:41+00:00"
+            "time": "2024-09-10T08:27:24+00:00"
         },
         {
             "name": "monolog/monolog",
