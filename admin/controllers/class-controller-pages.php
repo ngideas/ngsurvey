@@ -153,6 +153,7 @@ class NgSurvey_Controller_Pages extends NgSurvey_Controller {
 	 */
 	public function update () {
 	    
+	    $survey_id     = (int) $_POST['ngform']['sid'];
 	    $title         = sanitize_text_field( $_POST['title'] );
 	    $page_id       = (int) $_POST['ngform']['pid'];
 	    

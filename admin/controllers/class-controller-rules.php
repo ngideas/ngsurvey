@@ -171,10 +171,19 @@ class NgSurvey_Controller_Rules extends NgSurvey_Controller {
 	    $page_id       = (int) $_POST['ngform']['pid'];
 	    $rule_id       = (int) $_POST['ngform']['rid'];
 	    $title         = sanitize_text_field( $_POST['ngform']['title'] );
+	    if( !isset( $_POST['ngform']['rule_content'] ) || !is_string( $_POST['ngform']['rule_content'] ) ) {
+	        $this->raise_error( '002', __( 'Invalid conditional rules', 'ngsurvey' ) );
+	    }
 	    $rule_content  = wp_kses_post( wp_unslash( $_POST['ngform']['rule_content'] ) );
 
 	    // Make sure rule content is proper json object
-        $rule_content  = json_decode( utf8_encode( $rule_content ), true );
+	    $rule_content  = json_decode( $rule_content, true );
+	    if( json_last_error() !== JSON_ERROR_NONE || !is_array( $rule_content ) ||
+	        !isset( $rule_content['condition'], $rule_content['rules'] ) ||
+	        !in_array( $rule_content['condition'], array( 'AND', 'OR' ), true ) ||
+	        !is_array( $rule_content['rules'] ) ) {
+	        $this->raise_error( '002', __( 'Invalid conditional rules', 'ngsurvey' ) );
+	    }
 	    $rule_content  = json_encode( $rule_content );
 
 	    if( !$survey_id || !$rule_id || !$page_id || empty( $title ) ) {

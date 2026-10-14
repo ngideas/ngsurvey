@@ -345,7 +345,7 @@ class NgSurvey_Model_Responses extends NgSurvey_Model {
         $count = $wpdb->get_var( $wpdb->prepare(
             "SELECT count(*) " .
             "FROM {$wpdb->prefix}ngs_responses " .
-            "WHERE id = %d AND finished_date > created_date", $response_id
+            "WHERE id = %d AND finished_date_gmt <> '0000-00-00 00:00:00'", $response_id
         ) );
         
         return $count > 0;

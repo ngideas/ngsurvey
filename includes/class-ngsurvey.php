@@ -112,8 +112,11 @@ class NgSurvey {
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
+		$plugin_i18n = new NgSurvey_i18n();
+		$this->loader->add_action( 'init', $plugin_i18n, 'load_plugin_textdomain', 0 );
+
 		// Load default question types
-		$this->loader->add_action( 'plugins_loaded', $this, 'init_question_types', 20 );
+		$this->loader->add_action( 'init', $this, 'init_question_types', 20 );
 
 		// Load survey CPT
 		$plugin_cpt = new NgSurvey_CPT( NGSURVEY_CPT_NAME, $this->get_plugin_name(), $this->get_version() );
@@ -157,8 +160,7 @@ class NgSurvey {
 		$this->loader->add_action( 'wp_ajax_ngsa_ajax_handler', $plugin_cpt, 'handle_ajax_task' );
 
 		// Initialize survey metabox for storing survey settings
-		$this->register_surveys_metabox();
-		$this->register_presets_metabox();
+		$this->loader->add_action( 'init', $this, 'init_metaboxes', 20 );
 
 		// Load plugin scripts
 		$plugin_admin = new NgSurvey_Admin( $this->get_plugin_name(), $this->get_version() );
@@ -175,6 +177,14 @@ class NgSurvey {
 
 		// Apply filter to load NgSurvey plugin header
 		$this->loader->add_filter( 'extra_plugin_headers', $plugin_admin, 'add_ngsurvey_plugin_header' );
+	}
+
+	/**
+	 * Initialize translated metabox settings after plugins have registered their filters.
+	 */
+	public function init_metaboxes() {
+		$this->register_surveys_metabox();
+		$this->register_presets_metabox();
 	}
 
 	private function register_surveys_metabox() {
@@ -242,12 +252,14 @@ class NgSurvey {
 
 	private function register_metabox( $title, $cptName, $options, $defaults ) {
 		$plugin_metabox = new NgSurvey_Options( $title, $cptName, $this->get_plugin_name(), $options, $defaults );
-		$this->loader->add_action( 'add_meta_boxes', $plugin_metabox, 'register_options' );
-		$this->loader->add_action( 'save_post', $plugin_metabox, 'save_options' );
-		$this->loader->add_action( 'save_post', $plugin_metabox, 'save_revisions' );
-		$this->loader->add_action( 'wp_restore_post_revision', $plugin_metabox, 'restore_revisions', 10, 2 );
-		$this->loader->add_filter( '_wp_post_revision_fields', $plugin_metabox, 'get_revisions_fields', 10, 2 );
-		$this->loader->add_filter( '_wp_post_revision_field_my_meta', $plugin_metabox, 'display_revisions_fields', 10, 2 );
+		// The loader has already run by init, so register these callbacks directly.
+		add_action( 'add_meta_boxes', array( $plugin_metabox, 'register_options' ) );
+		add_action( $cptName . '_render_metabox', array( $plugin_metabox, 'render_metabox' ) );
+		add_action( 'save_post', array( $plugin_metabox, 'save_options' ) );
+		add_action( 'save_post', array( $plugin_metabox, 'save_revisions' ) );
+		add_action( 'wp_restore_post_revision', array( $plugin_metabox, 'restore_revisions' ), 10, 2 );
+		add_filter( '_wp_post_revision_fields', array( $plugin_metabox, 'get_revisions_fields' ), 10, 2 );
+		add_filter( '_wp_post_revision_field_my_meta', array( $plugin_metabox, 'display_revisions_fields' ), 10, 2 );
 	}
 
 	/**
@@ -263,6 +275,7 @@ class NgSurvey {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'ngsurvey_enqueue_survey_assets', $plugin_public, 'enqueue_survey_assets' );
 
 		// Front-end UI customization
 		$this->loader->add_filter( 'the_content', $plugin_public, 'single_survey_content' );

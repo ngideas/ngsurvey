@@ -17,6 +17,22 @@ For detailed setup instructions, visit the official [Documentation](https://docs
 
 This will download the latest developer copy of NgSurvey to your computer.
 
+## Compatibility checks
+
+The compatibility fixes were tested with WordPress 7.1.3, PHP 8.3.33 and MariaDB 10.11, with both NgSurvey and NgSurvey Extensions active. Coverage includes translation/bootstrap timing, shortcode and synced-pattern assets, survey author permissions, Unicode conditional rules, and front-end survey creation, editing, publishing and responses. External service integrations and other PHP versions require separate testing.
+
+Run the regression scripts only against a disposable WordPress installation containing the current source of both plugins. Set `NGSURVEY_WP_ROOT` to that installation's absolute path and use a PHP configuration with its database extensions enabled:
+
+```sh
+php tests/conditional-rules.test.php
+php tests/bootstrap.test.php
+wp eval-file tests/public-assets.php SURVEY_ID --path=/path/to/wordpress
+wp eval-file tests/survey-author-ajax.php --path=/path/to/wordpress
+wp eval-file tests/response-status.php --path=/path/to/wordpress
+```
+
+`SURVEY_ID` must identify an existing published survey with a page. Run `response-status.php` again with `NGSURVEY_STATUS_MODE=public` to test the public response model in a separate process. The author and response-status tests roll back their temporary database fixtures. Run the companion extension regression described in its README separately. Rules saved with already-corrupted text need to be corrected and saved again; the fix preserves UTF-8 for future saves and evaluations.
+
 ## Bugs ##
 If you find an issue, let us know [here](https://github.com/ngideas/ngsurvey/issues?state=open)!
 

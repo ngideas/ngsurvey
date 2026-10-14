@@ -46,7 +46,7 @@ class NgSurvey_Model_Locations extends NgSurvey_Model {
     public function get_list( $survey_id, $searchTerm, $order, $start, $length ) {
         global $wpdb;
         
-        $orderBy = !empty( $order ) ? $order : 'a.responses DESC';
+        $orderBy = !empty( $order ) ? $order : 'responses DESC';
         $search = !empty($searchTerm) ? ' AND (country like %s OR state like %s OR city like %s)' : '';
         $term = '%' . $wpdb->esc_like( $searchTerm ) . '%';
         $vars = !empty($searchTerm) ? array( $survey_id,  $term, $term, $term) : array( $survey_id );
@@ -55,7 +55,7 @@ class NgSurvey_Model_Locations extends NgSurvey_Model {
         $query = 
             "SELECT c.country_name as country, state, city, count(*) as responses " .
             "FROM {$wpdb->prefix}ngs_tracking AS a " .
-            "INNER JOIN {$wpdb->prefix}ngs_countries c ON c.country_code = a.country " .
+            "INNER JOIN {$wpdb->prefix}ngs_countries c ON BINARY c.country_code = BINARY a.country " .
             "WHERE a.post_id IN (SELECT id FROM {$wpdb->prefix}ngs_responses WHERE survey_id = %d) ";
         $groupBy =  "GROUP BY country, state, city ";
         

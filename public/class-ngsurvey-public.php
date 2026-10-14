@@ -76,6 +76,7 @@ class NgSurvey_Public {
 	        ) ); 
 
 	        ob_start();
+	        do_action( 'ngsurvey_enqueue_survey_assets' );
 	        $controller->display();
 	        $survey_content = ob_get_clean();
 	        
@@ -130,10 +131,10 @@ class NgSurvey_Public {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles( $hook = null ) {
+	public function enqueue_styles( $hook = null, $survey_rendered = false ) {
 	    global $post;
 	    
-	    $render_styles = get_post_type() == NGSURVEY_CPT_NAME || ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'ngsurvey') );
+	    $render_styles = $survey_rendered || get_post_type() == NGSURVEY_CPT_NAME || ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'ngsurvey') );
 	    
 	    /**
 	     * Applies the filter to determine if the NgSurvey styles can be rendered.
@@ -144,7 +145,7 @@ class NgSurvey_Public {
 	     */
 	    $render_styles = apply_filters( 'ngsurvey_render_styles', $render_styles );
 
-	    if( !$render_styles ) {
+	    if( !$render_styles || wp_style_is( 'ngsurvey', 'enqueued' ) ) {
 	        return;
 	    }
 	    
@@ -180,7 +181,7 @@ class NgSurvey_Public {
 	    }
 	    
 	    $styles[ 'ngsurvey' ] = NGSURVEY_URL . 'assets/public/css/ngsurvey-public.css';
-	    $handles = array();
+	    $handles = array( 'dashicons' );
 	    
 	    foreach ( $styles as $handle => $style ) {
 	        wp_enqueue_style( $handle, $style, $handles, $this->version, 'all' );
@@ -193,10 +194,10 @@ class NgSurvey_Public {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts( $hook, $skipCheck = false ) {
+	public function enqueue_scripts( $hook = null, $survey_rendered = false ) {
 	    global $post;
 
-	    $render_scripts = get_post_type() == NGSURVEY_CPT_NAME || ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'ngsurvey') );
+	    $render_scripts = $survey_rendered || get_post_type() == NGSURVEY_CPT_NAME || ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'ngsurvey') );
 	    
 	    /**
 	     * Applies the filter to determine if the NgSurvey scripts can be rendered.
@@ -207,13 +208,13 @@ class NgSurvey_Public {
 	     */
 	    $render_scripts = apply_filters( 'ngsurvey_render_scripts', $render_scripts );
 	    
-	    if( !$render_scripts ) {
+	    if( !$render_scripts || wp_script_is( 'ngsurvey-public', 'enqueued' ) ) {
 	        return;
 	    }
 	    
 	    $settings = include NGSURVEY_PATH . 'includes/init/class-ngsurvey-settings.php';
-	    wp_enqueue_script( 'jquery-ui-sortable', '', array( 'jquery' ), $this->version, false );
-	    wp_enqueue_script( 'moment', '', array( 'jquery' ), $this->version, false );
+	    wp_enqueue_script( 'jquery-ui-sortable' );
+	    wp_enqueue_script( 'moment' );
 	    $plugin_scripts = array();
 	    
 	    $scripts = array(
@@ -260,14 +261,28 @@ class NgSurvey_Public {
 	    
 	    $handles = array('jquery', 'jquery-ui-sortable', 'moment');
 	    foreach ( $scripts as $handle => $script ) {
-	        wp_enqueue_script( $handle, $script, $handles, $this->version, false );
+	        wp_enqueue_script( $handle, $script, $handles, $this->version, true );
 	        $handles[] = $handle;
 	    }
 	    
-	    wp_enqueue_script( 'ngsurvey-public', NGSURVEY_URL . 'assets/public/js/ngsurvey-public.js', $handles, $this->version, false );
+	    wp_enqueue_script( 'ngsurvey-public', NGSURVEY_URL . 'assets/public/js/ngsurvey-public.js', $handles, $this->version, true );
 
 	    // Register ajax
 	    wp_localize_script( 'ngsurvey-public', 'ng_ajax', $ajax_args ); 
+	}
+
+	/**
+	 * Load assets when a survey is rendered, including inside patterns and widgets.
+	 * The caller buffers output so late styles remain part of the survey markup.
+	 */
+	public function enqueue_survey_assets() {
+	    $this->enqueue_styles( null, true );
+	    $this->enqueue_scripts( null, true );
+
+	    // Content can render after head styles have already been printed.
+	    if ( did_action( 'wp_head' ) && wp_style_is( 'ngsurvey', 'enqueued' ) ) {
+	        wp_print_styles( 'ngsurvey' );
+	    }
 	}
 
 }

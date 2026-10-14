@@ -355,6 +355,7 @@ class NgSurvey_CPT {
 		) );
 
 		ob_start();
+		do_action( 'ngsurvey_enqueue_survey_assets' );
 		$controller->display( $params['id'] );
 
 		return ob_get_clean();
@@ -423,15 +424,12 @@ class NgSurvey_CPT {
 		// check nounce
 		check_ajax_referer( 'ngsa_nounce' );
 
-		if ( ! current_user_can( 'manage_options' ) ) {
+		$command = isset( $_POST['task'] ) && is_string( $_POST['task'] ) ? strtolower( wp_unslash( $_POST['task'] ) ) : '';
+		if ( ! preg_match( '/^[a-z]+\.[a-z_]+$/D', $command ) ||
+			( ! current_user_can( 'manage_options' ) && ! $this->can_handle_author_ajax_task( $command ) ) ) {
 			$error = new WP_Error( '001', __( 'Unauthorised access', 'ngsurvey' ) );
-			wp_send_json_error( $error );
+			wp_send_json_error( $error, 403 );
 		}
-
-		// sanitize the task command
-		$command = sanitize_text_field( $_POST['task'] );
-		$command = strtolower( $command );
-		$command = preg_replace( '/[^a-z0-9_.]/', '', $command );
 
 		// Get the controller and task names
 		list ( $type, $task ) = explode( '.', $command );
@@ -451,6 +449,178 @@ class NgSurvey_CPT {
 		) );
 
 		call_user_func( array( $controller, $task ) );
+	}
+
+	/**
+	 * Limit front-end authors to builder/report operations on their own survey.
+	 * Controllers trust the supplied survey ID, so also check every actual resource
+	 * before dispatching an operation that loads or changes it by its own ID.
+	 */
+	private function can_handle_author_ajax_task( $command ) {
+		global $wpdb;
+
+		$tasks = array(
+			'questions' => array( 'create', 'save', 'copy', 'move', 'remove', 'sort', 'custom' ),
+			'pages' => array( 'display', 'create', 'update', 'remove', 'sort' ),
+			'rules' => array( 'display', 'create', 'save', 'remove', 'sort' ),
+			'responses' => array( 'display', 'delete' ),
+			'response' => array( 'display' ),
+			'reports' => array( 'get_custom_answers' ),
+			'consolidated' => array( 'display' ),
+			'locations' => array( 'display' ),
+			'platforms' => array( 'display' ),
+			'browsers' => array( 'display' ),
+			'devices' => array( 'display' ),
+			'ajax' => array( 'execute' ),
+		);
+		list( $type, $task ) = explode( '.', $command );
+		$form = isset( $_POST['ngform'] ) && is_array( $_POST['ngform'] ) ? $_POST['ngform'] : array();
+		$survey_id = isset( $form['sid'] ) && is_scalar( $form['sid'] ) ? (int) $form['sid'] : 0;
+		$survey = get_post( $survey_id );
+		if ( ! isset( $tasks[ $type ] ) || ! in_array( $task, $tasks[ $type ], true ) ||
+			! $survey_id || ! $survey || $survey->post_type !== $this->cpt_name ||
+			(int) $survey->post_author !== get_current_user_id() ||
+			! current_user_can( 'edit_surveys' ) || ! current_user_can( 'edit_post', $survey_id ) ) {
+			return false;
+		}
+		if ( $type === 'ajax' ) {
+			// The report's CSV button is the only reviewed extension operation.
+			return isset( $_POST['operation'] ) && $_POST['operation'] === 'extensions.csv-download.get_csv_data';
+		}
+
+		$page_ids = array_map( 'intval', $wpdb->get_col( $wpdb->prepare(
+			"SELECT id FROM {$wpdb->prefix}ngs_pages WHERE survey_id = %d", $survey_id
+		) ) );
+		$page_id = isset( $form['pid'] ) && is_scalar( $form['pid'] ) ? (int) $form['pid'] : 0;
+		if ( in_array( $type, array( 'questions', 'rules' ), true ) ||
+			( $type === 'pages' && ! in_array( $task, array( 'create', 'sort' ), true ) ) ) {
+			if ( ! in_array( $page_id, $page_ids, true ) ) {
+				return false;
+			}
+		}
+
+		$question_ids = array_map( 'intval', $wpdb->get_col( $wpdb->prepare(
+			"SELECT DISTINCT m.question_id FROM {$wpdb->prefix}ngs_pages_questions_map m
+			INNER JOIN {$wpdb->prefix}ngs_pages p ON p.id = m.page_id
+			WHERE p.survey_id = %d AND NOT EXISTS (
+				SELECT 1 FROM {$wpdb->prefix}ngs_pages_questions_map other_map
+				INNER JOIN {$wpdb->prefix}ngs_pages other_page ON other_page.id = other_map.page_id
+				WHERE other_map.question_id = m.question_id AND other_page.survey_id <> %d
+			)", $survey_id, $survey_id
+		) ) );
+		$question_id = isset( $form['qid'] ) && is_scalar( $form['qid'] ) ? (int) $form['qid'] : 0;
+		if ( ( $type === 'questions' && ! in_array( $task, array( 'create', 'sort' ), true ) ) || $type === 'reports' ) {
+			if ( ! in_array( $question_id, $question_ids, true ) ) {
+				return false;
+			}
+			// Copy uses pid as the destination; all other builder tasks use its current page.
+			if ( $type === 'questions' && $task !== 'copy' && ! $wpdb->get_var( $wpdb->prepare(
+				"SELECT 1 FROM {$wpdb->prefix}ngs_pages_questions_map WHERE page_id = %d AND question_id = %d",
+				$page_id, $question_id
+			) ) ) {
+				return false;
+			}
+		}
+		if ( $command === 'questions.move' &&
+			( ! isset( $form['nid'] ) || ! is_scalar( $form['nid'] ) || ! in_array( (int) $form['nid'], $page_ids, true ) ) ) {
+			return false;
+		}
+		if ( $command === 'questions.custom' && ! current_user_can( 'upload_files' ) ) {
+			return false;
+		}
+		if ( $command === 'questions.save' ) {
+			$answer_ids = array_map( 'intval', $wpdb->get_col( $wpdb->prepare(
+				"SELECT id FROM {$wpdb->prefix}ngs_answers WHERE question_id = %d", $question_id
+			) ) );
+			$answer_ids[] = 0; // New answers/columns have no database ID yet.
+			foreach ( array( 'answer_id', 'column_id' ) as $field ) {
+				if ( isset( $form[ $field ] ) && ! $this->ids_are_allowed( $form[ $field ], $answer_ids, true ) ) {
+					return false;
+				}
+			}
+		}
+
+		$rule_ids = array();
+		if ( $type === 'rules' ) {
+			$rule_ids = array_map( 'intval', $wpdb->get_col( $wpdb->prepare(
+				"SELECT id FROM {$wpdb->prefix}ngs_rules WHERE survey_id = %d AND page_id = %d", $survey_id, $page_id
+			) ) );
+			if ( in_array( $task, array( 'save', 'remove' ), true ) &&
+				( ! isset( $form['rid'] ) || ! is_scalar( $form['rid'] ) || ! in_array( (int) $form['rid'], $rule_ids, true ) ) ) {
+				return false;
+			}
+			foreach ( array( 'action_page' => $page_ids, 'action_question' => $question_ids ) as $field => $allowed_ids ) {
+				if ( isset( $form[ $field ] ) && ! $this->ids_are_allowed( array( $form[ $field ] ), array_merge( array( 0 ), $allowed_ids ), true ) ) {
+					return false;
+				}
+			}
+			if ( $task === 'save' ) {
+				$conditions = isset( $form['rule_content'] ) && is_string( $form['rule_content'] ) ? json_decode( wp_kses_post( wp_unslash( $form['rule_content'] ) ), true ) : null;
+				if ( ! $this->rule_questions_are_allowed( $conditions, $question_ids ) ) {
+					return false;
+				}
+			}
+		}
+		if ( $task === 'sort' ) {
+			$allowed_ids = $type === 'pages' ? $page_ids : $rule_ids;
+			if ( $type === 'questions' ) {
+				$allowed_ids = array_intersect( $question_ids, array_map( 'intval', $wpdb->get_col( $wpdb->prepare(
+					"SELECT question_id FROM {$wpdb->prefix}ngs_pages_questions_map WHERE page_id = %d", $page_id
+				) ) ) );
+			}
+			if ( empty( $_POST['ordering'] ) || ! $this->ids_are_allowed( $_POST['ordering'], $allowed_ids ) ) {
+				return false;
+			}
+		}
+		if ( $type === 'response' || $command === 'responses.delete' ) {
+			$response_ids = $type === 'response' ? array( isset( $form['rid'] ) ? $form['rid'] : null ) : ( isset( $_POST['rid'] ) ? $_POST['rid'] : null );
+			if ( ! is_array( $response_ids ) || empty( $response_ids ) ) {
+				return false;
+			}
+			foreach ( $response_ids as $response_id ) {
+				if ( ! is_scalar( $response_id ) || ! ctype_digit( (string) $response_id ) || ! $wpdb->get_var( $wpdb->prepare(
+					"SELECT id FROM {$wpdb->prefix}ngs_responses WHERE id = %d AND survey_id = %d", (int) $response_id, $survey_id
+				) ) ) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	/** Rule conditions may only inspect questions belonging to this survey. */
+	private function rule_questions_are_allowed( $group, $question_ids ) {
+		if ( ! is_array( $group ) || ! isset( $group['condition'], $group['rules'] ) ||
+			! in_array( $group['condition'], array( 'AND', 'OR' ), true ) || ! is_array( $group['rules'] ) ) {
+			return false;
+		}
+		foreach ( $group['rules'] as $rule ) {
+			if ( ! is_array( $rule ) ) {
+				return false;
+			}
+			if ( array_key_exists( 'condition', $rule ) ) {
+				if ( ! $this->rule_questions_are_allowed( $rule, $question_ids ) ) {
+					return false;
+				}
+			} elseif ( ! isset( $rule['id'] ) || ! $this->ids_are_allowed( array( $rule['id'] ), $question_ids ) ) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/** Check ID lists before controllers use them in replacements or bulk updates. */
+	private function ids_are_allowed( $ids, $allowed_ids, $allow_new = false ) {
+		if ( ! is_array( $ids ) ) {
+			return false;
+		}
+		foreach ( $ids as $id ) {
+			if ( ! is_scalar( $id ) || ( ! ctype_digit( (string) $id ) && ! ( $allow_new && $id === '' ) ) ||
+				! in_array( (int) $id, $allowed_ids, true ) ) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**

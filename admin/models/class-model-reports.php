@@ -87,10 +87,11 @@ class NgSurvey_Model_Reports extends NgSurvey_Model {
     public function get_count_response_by_locations( $survey_id ) {
         global $wpdb;
         
+        // ISO country codes are ASCII identifiers; their tables can use different collations.
         $results = $wpdb->get_results( $wpdb->prepare(
             "SELECT c.country_name as label, count(*) AS value ".
             "FROM {$wpdb->prefix}ngs_tracking a ".
-            "INNER JOIN {$wpdb->prefix}ngs_countries c ON c.country_code = a.country " .
+            "INNER JOIN {$wpdb->prefix}ngs_countries c ON CAST(c.country_code AS BINARY) = CAST(a.country AS BINARY) " .
             "WHERE a.post_id IN (SELECT id FROM {$wpdb->prefix}ngs_responses WHERE survey_id = %d) ".
             "GROUP BY a.country " .
             "ORDER BY value DESC " .
@@ -170,12 +171,13 @@ class NgSurvey_Model_Reports extends NgSurvey_Model {
     public function get_pending_and_completed_count( $survey_id ) {
         global $wpdb;
         
+        // Completion is recorded by replacing the zero timestamp, even within the same second.
         $completed = $wpdb->get_var( 
-            $wpdb->prepare( "SELECT count(*) FROM {$wpdb->prefix}ngs_responses WHERE survey_id = %d AND created_date < finished_date", $survey_id )
+            $wpdb->prepare( "SELECT count(*) FROM {$wpdb->prefix}ngs_responses WHERE survey_id = %d AND finished_date_gmt <> '0000-00-00 00:00:00'", $survey_id )
         );
         
         $pending = $wpdb->get_var(
-            $wpdb->prepare( "SELECT count(*) FROM {$wpdb->prefix}ngs_responses WHERE survey_id = %d AND created_date > finished_date", $survey_id )
+            $wpdb->prepare( "SELECT count(*) FROM {$wpdb->prefix}ngs_responses WHERE survey_id = %d AND finished_date_gmt = '0000-00-00 00:00:00'", $survey_id )
         );
         
         $result = array(
@@ -241,7 +243,7 @@ class NgSurvey_Model_Reports extends NgSurvey_Model {
         global $wpdb;
         
         $responses = $wpdb->get_results( $wpdb->prepare( 
-            "SELECT a.id, a.created_by, a.created_date_gmt, a.finished_date_gmt, u.display_name, a.created_date < a.finished_date as finished ". 
+            "SELECT a.id, a.created_by, a.created_date_gmt, a.finished_date_gmt, u.display_name, a.finished_date_gmt <> '0000-00-00 00:00:00' as finished " .
             "FROM {$wpdb->prefix}ngs_responses AS a " .
             "LEFT JOIN {$wpdb->prefix}users AS u ON u.ID = a.created_by " .
             "WHERE survey_id = %d " .

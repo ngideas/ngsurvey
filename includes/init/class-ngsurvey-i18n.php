@@ -39,7 +39,7 @@ class NgSurvey_i18n {
 		load_plugin_textdomain(
 			'ngsurvey',
 			false,
-			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+			dirname( plugin_basename( NGSURVEY_PATH . 'ngsurvey.php' ) ) . '/languages/'
 		);
 
 	}

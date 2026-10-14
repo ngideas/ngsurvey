@@ -39,7 +39,9 @@
 
                 if (NgSurveyApi.hasOwnProperty(questionType + 'Question')) {
                     var context = NgSurveyApi[questionType + 'Question'];
-                    NgSurveyApi.Common.executeFunctionByName('initQuestion', context, question);
+                    if (typeof context.initQuestion === 'function') {
+                        NgSurveyApi.Common.executeFunctionByName('initQuestion', context, question);
+                    }
                 }
             });
         });
@@ -75,7 +77,9 @@
 
                 if (NgSurveyApi.hasOwnProperty(questionType + 'Question')) {
                     var context = NgSurveyApi[questionType + 'Question'];
-                    NgSurveyApi.Common.executeFunctionByName('initQuestion', context, question);
+                    if (typeof context.initQuestion === 'function') {
+                        NgSurveyApi.Common.executeFunctionByName('initQuestion', context, question);
+                    }
                 }
             });
         });

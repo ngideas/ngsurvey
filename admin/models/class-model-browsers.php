@@ -46,7 +46,7 @@ class NgSurvey_Model_Browsers extends NgSurvey_Model {
     public function get_list( $survey_id, $searchTerm, $order, $start, $length ) {
         global $wpdb;
         
-        $orderBy = !empty( $order ) ? $order : 'a.responses DESC';
+        $orderBy = !empty( $order ) ? $order : 'responses DESC';
         $search = !empty($searchTerm) ? ' AND browser_name like %s' : '';
         $vars = !empty($searchTerm) ? array( $survey_id, '%' . $wpdb->esc_like( $searchTerm ) . '%' ) : array( $survey_id );
         $data = new stdClass();

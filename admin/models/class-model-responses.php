@@ -80,7 +80,7 @@ class NgSurvey_Model_Responses extends NgSurvey_Model {
         
         $data->responses = $wpdb->get_results( 
             $wpdb->prepare( 
-                "SELECT a.id, a.created_by, a.created_date_gmt, a.finished_date_gmt, u.display_name, a.created_date < a.finished_date as finished, " .
+                "SELECT a.id, a.created_by, a.created_date_gmt, a.finished_date_gmt, u.display_name, a.finished_date_gmt <> '0000-00-00 00:00:00' as finished, " .
                 "t.country, t.state, t.city, t.browser_name, t.browser_version, t.browser_engine, t.platform_name, t.platform_version, t.device_type, t.brand_name, t.model_name " .
                 $fromWhere . " " .
                 "ORDER BY " . $orderBy . " " .
@@ -234,22 +234,29 @@ class NgSurvey_Model_Responses extends NgSurvey_Model {
     public function delete_responses( $survey_id, $response_ids ) {
         global $wpdb;
         
-        $wpdb->query($wpdb->prepare(
-            "DELETE FROM {$wpdb->prefix}ngs_responses " .
-            "WHERE survey_id = %d AND id IN (" . implode( ",", $response_ids ) . ")",
-            $survey_id
-        ));
-        
-        $wpdb->query($wpdb->prepare(
-            "DELETE FROM {$wpdb->prefix}ngs_response_details " .
-            "WHERE response_id IN (" . implode( ",", $response_ids ) . ")",
-        ));
-        
-        $wpdb->query($wpdb->prepare(
-            "DELETE FROM {$wpdb->prefix}ngs_tracking " .
-            "WHERE post_id IN (" . implode( ",", $response_ids ) . ") AND post_type = 2",
-        ));
-        
-        return true;
+        $response_ids = array_map( 'intval', $response_ids );
+        if ( empty( $response_ids ) ) {
+            return false;
+        }
+        $placeholders = implode( ',', array_fill( 0, count( $response_ids ), '%d' ) );
+        $parameters = array_merge( array( (int) $survey_id ), $response_ids );
+
+        // Delete dependent rows while their parent still exists, keeping every
+        // deletion scoped to the survey even if this model is called directly.
+        $details = $wpdb->query( $wpdb->prepare(
+            "DELETE d FROM {$wpdb->prefix}ngs_response_details d
+            INNER JOIN {$wpdb->prefix}ngs_responses r ON r.id = d.response_id
+            WHERE r.survey_id = %d AND r.id IN ($placeholders)", $parameters
+        ) );
+        $tracking = $wpdb->query( $wpdb->prepare(
+            "DELETE t FROM {$wpdb->prefix}ngs_tracking t
+            INNER JOIN {$wpdb->prefix}ngs_responses r ON r.id = t.post_id
+            WHERE r.survey_id = %d AND r.id IN ($placeholders) AND t.post_type = 2", $parameters
+        ) );
+        $responses = $wpdb->query( $wpdb->prepare(
+            "DELETE FROM {$wpdb->prefix}ngs_responses WHERE survey_id = %d AND id IN ($placeholders)", $parameters
+        ) );
+
+        return $details !== false && $tracking !== false && $responses !== false;
     }
 }

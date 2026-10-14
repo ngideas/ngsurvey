@@ -76,7 +76,13 @@ class NgSurvey_Rules_Parser {
 	public function validate_rules ( $rules_content, $response_id )	{
 	    global $wpdb;
 
-	    $conditions = json_decode( utf8_encode( $rules_content ), true);
+	    if( !is_string( $rules_content ) ) {
+	        return false;
+	    }
+	    $conditions = json_decode( $rules_content, true );
+	    if( json_last_error() !== JSON_ERROR_NONE || !is_array( $conditions ) ) {
+	        return false;
+	    }
 	    $where = $this->parseGroup( $conditions );
 	    
 	    if( empty( $where ) ) {
@@ -92,38 +98,58 @@ class NgSurvey_Rules_Parser {
 	}
 	
 	private function parseGroup($rule) {
-	    $parseResult = '';
-	    $bool_operator = in_array($rule['condition'], array('AND', 'OR')) ? $rule['condition'] : 'AND';
-	    $counter = 0;
-	    
-	    if( empty( $rule['rules'] ) ) {
-	        return $parseResult;
+	    if( !is_array( $rule ) || !isset( $rule['condition'], $rule['rules'] ) ||
+	        !in_array( $rule['condition'], array( 'AND', 'OR' ), true ) ||
+	        !is_array( $rule['rules'] ) || empty( $rule['rules'] ) ) {
+	        return '';
 	    }
-	    
-	    $total = count( $rule[ 'rules' ] );
-	    foreach( $rule[ 'rules' ] as $r ) {
-	        if( array_key_exists( 'condition', $r ) ) {
-	            $parseResult = $parseResult . $this->parseGroup($r);
-	        }  else {
-	            $parseResult = $parseResult . '('. $this->parseRule($r) .')';
-	            $total--;
 
-	            if($counter < $total && !empty($parseResult)) {
-	                $parseResult .= " ".$bool_operator." ";
-	            }
+	    $conditions = array();
+	    foreach( $rule[ 'rules' ] as $r ) {
+	        if( !is_array( $r ) ) {
+	            return '';
 	        }
+	        if( array_key_exists( 'condition', $r ) ) {
+	            $condition = $this->parseGroup( $r );
+	        }  else {
+	            $condition = $this->parseRule( $r );
+	        }
+	        if( $condition === '' ) {
+	            return '';
+	        }
+	        $conditions[] = '(' . $condition . ')';
 	    }
-	    
-	    return $parseResult;
+
+	    return implode( ' ' . $rule['condition'] . ' ', $conditions );
 	}
 	
 	private function parseRule($rule)  {
 	    
-	    if( !isset($this->operators[$rule['operator']]) || !in_array( $rule['type'], $this->operators[$rule['operator']]['apply_to'] ) ) {
+	    if( !isset( $rule['operator'], $rule['type'], $rule['id'] ) ||
+	        !is_string( $rule['operator'] ) || !is_string( $rule['type'] ) || !is_scalar( $rule['id'] ) ||
+	        !isset( $this->operators[$rule['operator']] ) ||
+	        !in_array( $rule['type'], $this->operators[$rule['operator']]['apply_to'], true ) ) {
 	        return '';
 	    }
 	    
 	    $operator = $this->operator_sql[$rule['operator']]['operator'];
+	    if( $this->operators[$rule['operator']]['accept_values'] ) {
+	        if( !isset( $rule['value'] ) ) {
+	            return '';
+	        }
+	        if( in_array( $operator, $this->needs_array, true ) ) {
+	            if( !is_array( $rule['value'] ) || empty( $rule['value'] ) ) {
+	                return '';
+	            }
+	            foreach( $rule['value'] as $value ) {
+	                if( !is_scalar( $value ) ) {
+	                    return '';
+	                }
+	            }
+	        } else if( !is_scalar( $rule['value'] ) ) {
+	            return '';
+	        }
+	    }
 
 	    if( !$this->operators[$rule['operator']]['accept_values'] ) {
 	        global $wpdb;
