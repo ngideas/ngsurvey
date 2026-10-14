@@ -7,7 +7,7 @@ Tags: surveys, survey, polls, forms, feedback forms
 Requires at least: 4.9
 Requires PHP: 7.2
 Tested up to: 7.1.3
-Stable tag: 1.2.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -123,6 +123,16 @@ Please post your query on the plugin support page. You are welcome to contribute
 15. Survey Response 2
 
 == Changelog ==
+
+= 1.3.0: Oct 14, 2026 =
+* Fix WordPress 7.1.3 compatibility for NgSurvey and extensions
+* Restore front-end survey management and author permissions
+* Fix survey assets in synced patterns and translation loading
+* Preserve Unicode in conditional rules
+* Correct response counts, reports, and CSV exports
+* Resolve builder JavaScript errors and PHP warnings
+* Add regression tests and update compatibility documentation
+
 = 1.2.2: Apr 30, 2024 =
 * [Feature] WP 6.6 compatibility
 
